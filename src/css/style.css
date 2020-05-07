@@ -1,4 +1,5 @@
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto; }
 
@@ -326,9 +327,14 @@ template {
   padding: 13px 20px;
   border: none;
   border-radius: 2px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Futura Demi', sans-serif; }
   .button--primary {
     background-color: #E3B873;
+    color: #FFFFFF; }
+  .button--outline {
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
     color: #FFFFFF; }
 
 .header {
@@ -363,12 +369,23 @@ template {
 
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background: #131313 url(../img/hero/hero.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
   color: #FFFFFF;
   padding-top: 100px; }
+  .hero__content {
+    max-width: 670px; }
+  .hero__description {
+    font-size: 22px;
+    max-width: 500px; }
+  .hero__button {
+    margin-right: 20px; }
   .hero__instagram {
     position: absolute;
     max-width: 80px;
@@ -384,7 +401,12 @@ template {
     bottom: 0;
     min-width: 247px;
     min-height: 97px;
-    background-color: #131313; }
+    background-color: #131313;
+    font-family: 'Yeseva One', cursive;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase; }
 
 .instagram {
   display: flex;
@@ -398,7 +420,12 @@ template {
     transform: rotate(90deg); }
 
 .title {
-  margin: 0; }
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive;
+  font-size: 40px; }
+  .title--primary {
+    color: #E3B873; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
