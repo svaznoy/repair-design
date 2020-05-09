@@ -363,7 +363,11 @@ body {
   .button--outline {
     border: 1px solid #FFFFFF;
     background-color: transparent;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2); }
+    .button--outline:hover {
+      transition: box-shadow 0.3s;
+      box-shadow: none; }
 
 .header {
   position: fixed;
@@ -376,12 +380,15 @@ body {
 
 .menu {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
 
 .logo--primary {
   color: #E3B873;
   text-transform: uppercase;
   text-decoration: none; }
+  .logo--primary:hover {
+    text-decoration: underline; }
 
 .nav__item {
   color: #FFFFFF;
@@ -392,10 +399,13 @@ body {
     color: #E3B873; }
 
 .phone {
-  color: #E3B873; }
+  color: #E3B873;
+  text-decoration: none; }
 
 .contacts__phone {
   margin-right: 40px; }
+  .contacts__phone:hover {
+    text-decoration: underline; }
 
 .hero {
   position: relative;
@@ -452,9 +462,11 @@ body {
       width: 30px;
       height: 30px;
       border: 1px solid #E3B873;
-      color: #E3B873;
       border-radius: 50%;
       margin-left: 12px; }
+    .hero__scroll-down:hover {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline; }
 
 .instagram {
   display: flex;
@@ -474,6 +486,12 @@ body {
       border: 1px solid #E3B873;
       background-color: #E3B873;
       margin-left: 10px; }
+    .instagram__link:hover::before {
+      content: '';
+      width: 50px;
+      border: 1px solid #E3B873;
+      background-color: #E3B873;
+      margin-right: 10px; }
 
 .title {
   margin: 0;
