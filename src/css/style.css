@@ -349,7 +349,7 @@ body {
       margin: 0 10px; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 22px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -387,6 +387,9 @@ body {
   justify-content: space-between;
   align-items: center; }
 
+.logo__item {
+  font-size: 1.078rem; }
+
 .logo--primary {
   color: #E3B873;
   text-transform: uppercase;
@@ -398,7 +401,8 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.85rem; }
+  font-size: 1rem;
+  margin-right: 2.4rem; }
   .nav__item:hover {
     color: #E3B873; }
 
@@ -437,9 +441,15 @@ body {
     margin-left: 4.28rem; }
   .hero__description {
     font-size: 1.57rem;
-    max-width: 35.71rem; }
+    line-height: 1.4;
+    max-width: 500px;
+    margin-top: 1.1rem;
+    margin-bottom: 3.3rem; }
   .hero__button {
-    margin-right: 20px; }
+    padding: 19px 25px;
+    margin-right: 18px; }
+    .hero__button-outline {
+      padding: 18px 42px; }
   .hero__instagram {
     position: absolute;
     max-width: 80px;
@@ -458,7 +468,7 @@ body {
     background-color: #131313;
     font-family: 'Yeseva One', cursive;
     color: #FFFFFF;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-decoration: none;
     text-transform: uppercase; }
     .hero__scroll-down::after {
@@ -468,7 +478,7 @@ body {
       height: 30px;
       border: 1px solid #E3B873;
       border-radius: 50%;
-      margin-left: 12px; }
+      margin-left: 1.3rem; }
     .hero__scroll-down:hover {
       -webkit-text-decoration-line: underline;
       text-decoration-line: underline; }
@@ -483,6 +493,7 @@ body {
     align-items: center;
     text-transform: uppercase;
     color: #E3B873;
+    font-size: 1.1rem;
     text-decoration: none;
     transform: rotate(90deg); }
     .instagram__link::after {
@@ -502,7 +513,8 @@ body {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive;
-  font-size: 2.857rem; }
+  font-size: 2.857rem;
+  line-height: 1.3; }
   .title--primary {
     color: #E3B873; }
 
