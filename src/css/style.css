@@ -349,8 +349,8 @@ body {
       margin: 0 10px; }
 
 .button {
-  padding: 11px 22px;
   border: none;
+  padding: 19px 25px;
   border-radius: 2px;
   text-transform: uppercase;
   font-family: 'Futura Demi', sans-serif;
@@ -366,12 +366,17 @@ body {
       box-shadow: none; }
   .button--outline {
     border: 1px solid #FFFFFF;
+    padding: 18px 78px;
     background-color: transparent;
     color: #FFFFFF;
     box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2); }
     .button--outline:hover {
       transition: box-shadow 0.3s;
       box-shadow: none; }
+
+@media screen and (max-width: 420px) {
+  .button {
+    font-size: 0.86rem; } }
 
 .header {
   position: fixed;
@@ -397,14 +402,16 @@ body {
   .logo--primary:hover {
     text-decoration: underline; }
 
-.nav__item {
-  color: #FFFFFF;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-right: 2.5rem; }
-  .nav__item:hover {
-    color: #E3B873; }
+.nav {
+  display: flex; }
+  .nav__item {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-right: 2.4rem; }
+    .nav__item:hover {
+      color: #E3B873; }
 
 .phone {
   color: #E3B873;
@@ -446,10 +453,7 @@ body {
     margin-top: 1.1rem;
     margin-bottom: 3.3rem; }
   .hero__button {
-    padding: 19px 25px;
     margin-right: 18px; }
-    .hero__button-outline {
-      padding: 18px 42px; }
   .hero__instagram {
     position: absolute;
     max-width: 80px;
@@ -518,7 +522,7 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1210px) {
   html {
     font-size: 12px; }
   .nav__item {
@@ -552,6 +556,38 @@ body {
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 420px) {
+  .logo__item {
+    font-size: 0.88rem;
+    margin-right: 6.7rem; }
+  .menu {
+    justify-content: space-around; }
+    .menu__contacts {
+      margin-right: 3.5rem; }
+  .contacts__phone {
+    font-size: 0.8rem; }
+  .hero__content {
+    margin: 0; }
+  .hero__title {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 0.77rem; }
+  .hero__description {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 2rem; }
+  .hero__button {
+    min-width: 22.5rem;
+    padding: 15px 38px; }
+  .hero__button-outline {
+    font-size: 0.84rem;
+    font-weight: 300;
+    min-width: 22.5rem;
+    padding: 15px 0; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
