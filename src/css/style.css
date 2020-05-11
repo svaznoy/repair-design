@@ -326,9 +326,12 @@ template {
 *, *:before, *:after {
   box-sizing: border-box; }
 
+html {
+  font-size: 14px; }
+
 body {
   font-family: 'Futura Book', sans-serif;
-  font-size: 14px; }
+  font-size: 1rem; }
 
 .section-title {
   text-align: center;
@@ -365,6 +368,10 @@ body {
     background-color: transparent;
     color: #FFFFFF; }
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px; } }
+
 .header {
   position: fixed;
   left: 0;
@@ -376,7 +383,8 @@ body {
 
 .menu {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
 
 .logo--primary {
   color: #E3B873;
@@ -419,9 +427,9 @@ body {
     background-color: rgba(19, 19, 19, 0.7); }
   .hero__content {
     position: relative;
-    max-width: 670px; }
+    max-width: 47.8rem; }
   .hero__description {
-    font-size: 22px;
+    font-size: 1.57rem;
     max-width: 500px; }
   .hero__button {
     margin-right: 20px; }
@@ -443,7 +451,7 @@ body {
     background-color: #131313;
     font-family: 'Yeseva One', cursive;
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 0.9rem;
     text-decoration: none;
     text-transform: uppercase; }
     .hero__scroll-down::after {
@@ -479,6 +487,6 @@ body {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive;
-  font-size: 40px; }
+  font-size: 2.85rem; }
   .title--primary {
     color: #E3B873; }
