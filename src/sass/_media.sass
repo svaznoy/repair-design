@@ -22,9 +22,15 @@
     .title
         font-size: 1.64rem 
     .hero
+        &::before 
+        content: ''
+        top: 0
+        left: 0
+        
+
         &__content
-            margin-right: 0rem 
-            max-width: 22.86rem
+            margin-right: 0
+            
         &__description
             font-size: 1.29rem 
             margin-bottom: 2.28rem
@@ -34,30 +40,27 @@
             margin-bottom: 1.85rem
         &__scroll-down
             display: none 
-@media screen and ( max-width:  420px)
+@media screen and ( max-width:  320px)
+    .header
+        max-width: 375px
     .logo
         &__item
-            font-size: 0.87rem   
- 
-
+            font-size: 1.0.7rem   
     &__contacts 
-        margin-right: 0
     .contacts
         &__phone
-            font-size: 0.8rem
+            margin-left: 1rem
+            font-size: 1.08rem
     .hero
         &__content 
-            margin: 0
         &__title
-            font-size: 1.4rem 
-            letter-spacing: 1px
+            font-size: 1.9rem 
             line-height: 1.5
             margin-bottom: 0.77rem
         &__description
             margin: 0
             padding: 0
-            font-size: 1.2rem
-            line-height: 1.4
+            font-size: 1.8rem
             margin-bottom: 2rem
         &__button
             min-width: 22.5rem
