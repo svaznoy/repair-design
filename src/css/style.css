@@ -350,7 +350,6 @@ body {
 
 .button {
   border: none;
-  padding: 19px 25px;
   border-radius: 2px;
   text-transform: uppercase;
   font-family: 'Futura Demi', sans-serif;
@@ -366,7 +365,6 @@ body {
       box-shadow: none; }
   .button--outline {
     border: 1px solid #FFFFFF;
-    padding: 18px 78px;
     background-color: transparent;
     color: #FFFFFF;
     box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2); }
@@ -417,6 +415,9 @@ body {
   color: #E3B873;
   text-decoration: none; }
 
+.contacts__button {
+  padding: 11px 22px; }
+
 .contacts__phone {
   margin-right: 2.85rem; }
   .contacts__phone:hover {
@@ -453,7 +454,10 @@ body {
     margin-top: 1.1rem;
     margin-bottom: 3.3rem; }
   .hero__button {
+    padding: 18px 25px;
     margin-right: 18px; }
+  .hero__button-outline {
+    padding: 18px 46px; }
   .hero__instagram {
     position: absolute;
     max-width: 80px;
@@ -522,7 +526,7 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1210px) {
+@media screen and (max-width: 1290px) {
   html {
     font-size: 12px; }
   .nav__item {
@@ -559,12 +563,9 @@ body {
 
 @media screen and (max-width: 420px) {
   .logo__item {
-    font-size: 0.88rem;
-    margin-right: 6.7rem; }
-  .menu {
-    justify-content: space-around; }
-    .menu__contacts {
-      margin-right: 3.5rem; }
+    font-size: 0.87rem; }
+  __contacts {
+    margin-right: 0; }
   .contacts__phone {
     font-size: 0.8rem; }
   .hero__content {
