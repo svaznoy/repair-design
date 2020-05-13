@@ -677,6 +677,7 @@ img {
     margin-bottom: 3rem; }
   .hero__button {
     min-width: 28.5rem;
+    margin-right: 0;
     padding: 18px 38px;
     font-size: 1.1rem;
     margin-bottom: 2rem; }
