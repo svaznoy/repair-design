@@ -12,6 +12,17 @@
             display: none
         &__content
             margin-left: 0
+@media screen and ( max-width: 760px)
+    .row
+        flex-direction: column  
+        align-items: center
+    .types
+        &__card
+            margin-bottom: 4.29rem 
+    .card
+        &__text
+            margin-left: 0   
+
 @media screen and ( max-width:  570px)
     .contacts
         &__phone
@@ -21,12 +32,13 @@
             display: none
     .title
         font-size: 1.64rem 
-    .hero
         &__content
             margin-right: 0rem 
-            max-width: 22.86rem
+            max-width: 22.86rem   
         &__description
             font-size: 1.29rem 
+            line-height: 1.5
+            min-width: 22rem
             margin-bottom: 2.28rem
         &__button
             display: block    
@@ -34,18 +46,27 @@
             margin-bottom: 1.85rem
         &__scroll-down
             display: none 
+@media screen and ( max-height:  520px)
+    .hero
+        &__scroll-down
+            display: none
+
 @media screen and ( max-width:  420px)
+    .menu
+        
+        justify-content: space-between
+        &__contacts
+           
     .logo
         &__item
-            font-size: 1.08rem   
+            font-size: 1.08rem  
     &__contacts 
-        margin-right: 0
     .contacts
+        margin-right: 0
         &__phone
             font-size: 1.02rem
     .hero
-        &__content 
-            margin: 0
+        &__content
         &__title
             font-size: 1.9rem 
             line-height: 1.5
@@ -57,20 +78,37 @@
             margin-bottom: 3rem
         &__button
             min-width: 28.5rem
-            padding: 17px 38px
+            padding: 18px 38px
             font-size: 1.1rem
+            margin-bottom: 2rem
         &__button-outline
             margin: 0
             font-size: 1.1rem
             font-weight: 300
             min-width: 28.4rem
             padding: 18px 0
-       
-@media screen and ( max-height:  520px)
-    .hero
-        &__scroll-down
-            display: none
-        
-                       
-        
-  
+    .section
+        &-title
+            &__heading
+               font-size: 1.8rem 
+
+
+    img 
+        max-width: 340px                 
+    .types
+        &__section-title
+            margin-bottom: 3rem
+        &__card
+            margin-bottom: 5.29rem                   
+    .card
+        &__text
+            max-width: 22.4rem
+            padding: 1.79rem 2.41rem
+            margin-top: -12rem 
+        &__title
+            font-size:  1.26rem      
+        &-design__pricetag
+            padding: 1.0rem 0
+            padding-left: 4rem
+            padding-right: 4rem
+
