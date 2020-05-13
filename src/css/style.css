@@ -563,32 +563,32 @@ body {
 
 @media screen and (max-width: 420px) {
   .logo__item {
-    font-size: 0.87rem; }
+    font-size: 1.08rem; }
   __contacts {
     margin-right: 0; }
   .contacts__phone {
-    font-size: 0.8rem; }
+    font-size: 1.02rem; }
   .hero__content {
     margin: 0; }
   .hero__title {
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+    font-size: 1.9rem;
     line-height: 1.5;
-    margin-bottom: 0.77rem; }
+    margin-bottom: 0.67rem; }
   .hero__description {
     margin: 0;
-    padding: 0;
-    font-size: 1.2rem;
-    line-height: 1.4;
-    margin-bottom: 2rem; }
+    min-width: 26.7rem;
+    font-size: 1.5rem;
+    margin-bottom: 3rem; }
   .hero__button {
-    min-width: 22.5rem;
-    padding: 15px 38px; }
+    min-width: 28.5rem;
+    padding: 17px 38px;
+    font-size: 1.1rem; }
   .hero__button-outline {
-    font-size: 0.84rem;
+    margin: 0;
+    font-size: 1.1rem;
     font-weight: 300;
-    min-width: 22.5rem;
-    padding: 15px 0; } }
+    min-width: 28.4rem;
+    padding: 18px 0; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
