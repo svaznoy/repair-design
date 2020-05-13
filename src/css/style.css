@@ -649,6 +649,8 @@ img {
   padding-right: 5.6rem; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -660,6 +662,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     background: #131313;
