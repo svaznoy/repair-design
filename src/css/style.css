@@ -1,5 +1,5 @@
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 1256px;
   margin: auto; }
 
@@ -755,17 +755,14 @@ img {
   .hero__description {
     font-size: 1.5rem;
     line-height: 1.5;
-    min-width: 320px;
     margin-bottom: 2.28rem; }
   .hero__button {
-    display: block;
-    min-width: 26rem;
+    width: 90%;
     margin-bottom: 1.85rem; }
   .hero__button-outline {
-    margin: 0;
+    width: 90%;
     font-size: 1.1rem;
     font-weight: 300;
-    min-width: 26rem;
     padding: 18px 0; }
   .hero__scroll-down {
     display: none; }
@@ -795,36 +792,33 @@ img {
       font-size: 1.02rem;
       margin-right: 0; }
   .hero__content {
-    margin-right: 0rem;
-    max-width: 25rem; }
+    margin-right: 0rem; }
   .hero__title {
     font-size: 1.9rem;
     line-height: 1.4;
     margin-bottom: 0.67rem; }
   .hero__description {
+    width: 100%;
     margin: 0;
-    min-width: 26.7rem;
     font-size: 1.5rem;
     line-height: 1.4;
     margin-bottom: 3rem; }
   .hero__button {
-    min-width: 28.5rem;
+    width: 100%;
     margin-right: 0;
     padding: 18px 38px;
     font-size: 1.1rem;
     margin-bottom: 2rem; }
   .hero__button-outline {
+    width: 100%;
     margin: 0;
     font-size: 1.1rem;
     font-weight: 300;
-    min-width: 28.4rem;
     padding: 18px 0; }
   .section-title__heading {
     font-size: 1.8rem; }
   .section-title__image {
     margin-bottom: 0.4rem; }
-  img {
-    max-width: 340px; }
   .types__section-title {
     margin-bottom: 3rem; }
   .types__card {
