@@ -18,10 +18,17 @@
             display: none
         &__content
             margin-left: 0
-@media screen and ( max-width: 760px)
+@media screen and ( max-width: 900px)
     .row
         flex-direction: column  
         align-items: center
+    .card
+        &__text
+            margin-left: 0 
+    .types
+        &__card
+            margin-bottom: 4.29rem             
+@media screen and ( max-width: 760px)
     .types
         &__card
             margin-bottom: 4.29rem 
@@ -62,7 +69,14 @@
             min-width: 26rem
             padding: 18px 0    
         &__scroll-down
-            display: none 
+            display: none
+
+    .design
+        background: $darkbgc 
+
+    .section
+        &-title 
+            color: $light       
 @media screen and ( max-height:  520px)
     .hero
         &__scroll-down
@@ -118,8 +132,10 @@
         &-title
             &__heading
                font-size: 1.8rem 
+            &__image
+                margin-bottom: 0.4rem   
 
-
+    
     img 
         max-width: 340px                 
     .types
@@ -131,11 +147,19 @@
         &__text
             max-width: 22.4rem
             padding: 1.79rem 2.41rem
-            margin-top: -12rem 
+            margin-top: -12.2rem 
         &__title
             font-size:  1.26rem      
         &-design__pricetag
+            font-weight: 300
             padding: 1.0rem 0
             padding-left: 4rem
             padding-right: 4rem
-
+            bottom: -0.5rem
+    .description
+        &__heading
+            max-width: 300px
+            font-weight: normal
+            font-size: 1.22rem
+            margin-bottom: 3.2rem
+   
