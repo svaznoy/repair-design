@@ -1,31 +1,58 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
 
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  } 
+$(document).ready(function () {
+    var modal = $('.modal'),
+    modalBtn= $('[data-toggle=modal]'),
+    modalClose = $('.modal__close');
 
-  modalBtn.forEach(element => {
-    element.addEventListener('click',switchModal);
-  });
-  // Закрываю модальное окно через класс modal__close
-  closeBtn.addEventListener('click', switchModal);
-  // закрываю модальное окно при клике за область модального окна
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.classList.toggle('modal--visible');
-    }
-  }
-  // Удаляю modal--visible при нажатии клавиши esc 
-  document.onkeydown = function(event) {
-    if(event.key === "Escape" || event.key === "Esc" || event.key === 27) {
-      modal.classList.remove('modal--visible');
-    }
-  } 
+    modalBtn.on('click', function() {
+       modal.toggleClass('modal--visible');
+
+    });
+    modalClose.on('click', function() {
+      modal.toggleClass('modal--visible');
+    });
+
+
+    
+
 });
 
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+  /**
+   * При прокрутке страницы, показываем или срываем кнопку
+   */
+  $(window).scroll(function () {
+      // Если отступ сверху больше 50px то показываем кнопку "Наверх"
+      if ($(this).scrollTop() > 500) {
+          $('#arrow').fadeIn();
+      } else {
+          $('#arrow').fadeOut();
+      }
+  });
+  
+  /** При нажатии на кнопку мы перемещаемся к началу страницы */
+  $('#arrow').click(function () {
+      $('body,html').animate({
+          scrollTop: 0
+      }, 500);
+      return false;
+  });
+  
+});
 
 
 
