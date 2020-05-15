@@ -341,6 +341,7 @@ img {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase; }
   .section-title__heading {
+    font-weight: 500;
     font-size: 1.4rem; }
   .section-title__image {
     display: flex;
@@ -581,8 +582,14 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.section__control {
+  color: #131313; }
+
 .types__section-title {
   margin-bottom: 2rem; }
+
+.section__types {
+  color: #131313; }
 
 .row {
   display: flex;
