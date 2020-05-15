@@ -336,6 +336,9 @@ body {
 img {
   max-width: 100%; }
 
+.col-32 {
+  flex-basis: 32%; }
+
 .section-title {
   text-align: center;
   font-family: 'Yeseva One', cursive;
@@ -499,6 +502,14 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    background: #131313;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem; }
   .hero__content {
     position: relative;
     max-width: 47.8rem;
@@ -595,9 +606,6 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
