@@ -39,11 +39,40 @@ $(document).ready(function () {
     modalClose.on('click', function() {
       modal.toggleClass('modal--visible');
     });
-
-
-    
+    //Закрытие модалки по клику вне области модального окна
+    $(document).click(function (e) {
+        if ($(e.target).is('.modal')) {
+            modal.toggleClass('modal--visible');
+        }
+    });
+    //Закрытие модалки по клику esc
+    $(document).keydown(function(event) {
+        if (event.key === "Escape" || event.key === "Esc" || event.key === 27 ) {
+            modal.toggleClass('modal--visible');
+        }
+    });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $(document).ready(function(){
