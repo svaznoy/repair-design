@@ -75,8 +75,8 @@ $(document).ready(function () {
     var bullets = $('.swiper-pagination');
 
 
-    nextBtn.css('left', prevBtn.width() + 20 + bullets.width() + 30);
-    bullets.css('left', prevBtn.width() + 30);
+    nextBtn.css('left', prevBtn.width() + 20 + bullets.width() + 10);
+    bullets.css('left', prevBtn.width() + 20);
 
     
   });
@@ -103,6 +103,10 @@ $(document).ready(function(){
   });
   
 });
+
+
+
+
 
 
 

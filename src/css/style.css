@@ -17,6 +17,14 @@
 .col-60 {
   width: 60%; }
 
+.col-30 {
+  width: 30%; }
+  .col-30--right {
+    margin-right: 100px; }
+
+.col-70 {
+  width: 70%; }
+
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/FuturaBookC.woff") format("woff"), url("../fonts/FuturaBookC.woff2") format("woff");
@@ -364,15 +372,20 @@ img {
     font-size: 1.74rem; }
     .section-title__heading--primary {
       color: #E3B873; }
-  .section-title__word {
-    display: flex;
-    align-items: center; }
-    .section-title__word::after {
-      content: '';
-      width: 6.42rem;
-      height: 1px;
-      background: #E3B873;
-      margin-left: 2.4rem; }
+  .section-title__target {
+    font-size: 1.92rem;
+    font-weight: 500;
+    line-height: 2.78rem;
+    margin-bottom: 5.7rem; }
+    .section-title__target--type {
+      display: flex;
+      align-items: center; }
+      .section-title__target--type::after {
+        content: '';
+        width: 6.42rem;
+        height: 1px;
+        background: #E3B873;
+        margin-left: 6.4rem; }
   .section-title__text {
     font-family: 'Futura Book', sans-serif;
     font-size: 1.28rem;
@@ -394,6 +407,55 @@ img {
       height: 2px;
       background-color: #E3B873;
       margin: 0 10px; }
+  .section-title__subheading {
+    font-family: 'Yeseva One', cursive;
+    color: #E3B873;
+    text-transform: uppercase;
+    font-size: 1.07rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 0.68rem;
+    line-height: 1.74rem; }
+  .section-title__tagetword {
+    display: block; }
+  .section-title__number {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF; }
+  .section-title__numslide {
+    display: block;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 500;
+    font-size: 1.28rem;
+    line-height: 1.78rem;
+    margin-bottom: 1.3rem;
+    color: #FFFFFF;
+    text-transform: uppercase; }
+  .section-title__uptitle {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 500; }
+  .section-title__description {
+    padding: 0;
+    margin: 0;
+    font-family: 'Futura Book', sans-serif;
+    color: #FFFFFF;
+    font-weight: 500;
+    line-height: 1.82rem;
+    font-size: 1.06rem;
+    max-width: 337px;
+    margin-bottom: 0.85rem; }
+  .section-title__description2 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Futura Book', sans-serif;
+    color: #FFFFFF;
+    font-weight: 500;
+    line-height: 1.78rem;
+    font-size: 1.06rem;
+    max-width: 290px;
+    margin-bottom: 6.6rem; }
 
 .button {
   border: none;
@@ -686,12 +748,8 @@ img {
 .swiper-button-next {
   background: url(../img/arrow-next.svg) no-repeat center; }
 
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 10px; }
-
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
-  left: 0;
   bottom: 1px; }
 
 .section__control {
@@ -743,7 +801,8 @@ img {
   padding: 1.21rem 2.4rem; }
 
 .design {
-  padding: 10rem 0; }
+  padding: 10rem 0;
+  background: linear-gradient(to top, #131313 50%, #FFFFFF 50%); }
 
 .description__heading {
   display: inline-block;
@@ -769,6 +828,50 @@ img {
   padding: 1.21rem 0;
   padding-left: 2.6rem;
   padding-right: 5.6rem; }
+
+.target {
+  margin-top: -159px; }
+
+.col-30--right {
+  margin-right: 100px; }
+
+.col-70 {
+  margin-top: 85px; }
+
+.slide {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0; }
+  .slide-list {
+    margin-bottom: 3rem;
+    flex-basis: 30%; }
+    .slide-list__words {
+      display: block; }
+    .slide-list__number {
+      display: inline-block;
+      font-family: 'Yeseva One', cursive;
+      font-size: 1.07rem;
+      line-height: 1.5rem;
+      border-bottom: 1px solid #FFFFFF;
+      margin-bottom: 0.7rem; }
+    .slide-list__link {
+      text-decoration: none; }
+    .slide-list__text {
+      color: #FFFFFF;
+      font-family: 'Futura Book', sans-serif;
+      font-weight: 500;
+      font-size: 1.0rem;
+      line-height: 1.28rem; }
+    .slide-list__header {
+      margin: 0;
+      font-size: 1.07rem;
+      line-height: 1.28rem;
+      font-weight: 500;
+      font-family: 'Futura Book', sans-serif; }
 
 .modal {
   opacity: 0;
