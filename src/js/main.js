@@ -68,14 +68,17 @@ $(document).ready(function () {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    })
+    });
 
     var nextBtn = $('.swiper-button-next');
     var prevBtn = $('.swiper-button-prev');
     var bullets = $('.swiper-pagination');
 
-    nextBtn.css('left', prevBtn.width() + 10 + bullets.width() + 10);
-    bullets.css('left', prevBtn.width() + 10);
+
+    nextBtn.css('left', prevBtn.width() + 20 + bullets.width() + 30);
+    bullets.css('left', prevBtn.width() + 30);
+
+    
   });
 
 $(document).ready(function(){

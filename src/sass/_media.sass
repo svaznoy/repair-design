@@ -19,7 +19,23 @@
         max-width: 420px 
     &__item
         margin-right: 0.5rem              
+    .row
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
+    .col-50
+        width: 50%
+        margin-right: auto 
+        margin-left: auto     
+    .swipe
+        &-wraper
+            &__image
+                margin-top: 1rem
+        &-slide
+            &__heading
+                max-width: 100px
+                
 @media screen and ( max-width:  1000px)
     .nav
         display: none
@@ -28,16 +44,44 @@
             display: none
         &__content
             margin-left: 0
+
+    .col-50
+        width: 50%
+        margin-right: auto        
+
+    .swipe
+        &-wraper
+            &__image
+                max-width: 100% 
+    .swiper
+        &-slide
+            &__text
+                margin-right: auto                
 @media screen and ( max-width: 900px)
     .row
         flex-direction: column  
         align-items: center
+        
     .card
         &__text
             margin-left: 0 
     .types
         &__card
-            margin-bottom: 4.29rem             
+            margin-bottom: 4.29rem   
+    .col-50
+        width: 60%
+    .col-60
+        align-items: center
+        width: 70%     
+    .swiper
+        &-slide
+            &__text
+                margin-right: auto
+    .swiper
+        &-wraper
+            &__image 
+              
+
 @media screen and ( max-width: 760px)
     .types
         &__card
@@ -48,7 +92,50 @@
     .title
         &__content
             margin-right: 0rem 
-            max-width: 22.86rem  
+            max-width: 22.86rem 
+    .swiper
+        &-wraper
+            &__image 
+                max-width: 100% 
+@media screen and ( max-width:  620px)
+    .row
+        align-items: flex-end
+        margin: auto
+    .col-50
+        width: 100%
+    .col-60
+        width: 100%
+
+    .section
+        &-title
+            &__heading
+                &--primary  
+                    font-size: 1.7rem 
+                    margin-bottom: 1.6rem     
+            &__word
+                &::after
+                    display: none
+            &__text
+                max-width: 302px
+                font-size: 1.18rem
+                line-height: 1.6        
+    .row
+        flex-direction: column  
+        align-items: center    
+    .swiper
+        &-slide
+            &__text
+                flex-basis: 42% 
+                &:last-child
+                    margin-bottom: 4.9rem  
+            &__heading
+                margin-right: 1rem
+                font-weight: 500
+                font-size: 1.19rem
+            &__value
+                font-size: 1.18rem 
+                    
+
 @media screen and ( max-width:  580px)
     .contacts
         &__phone
@@ -83,7 +170,22 @@
 
     .section
         &-title 
-            color: $light       
+            color: $light  
+    .col-50
+        width: 100%
+   
+    .col-60
+        align-items: center
+        margin: 0 auto
+        width: 100% 
+    .swiper
+        &-wraper
+            &__image 
+                max-width: 100%
+                 
+@media screen and ( max-height:  560px) 
+    .col-50
+        width: 60%
 @media screen and ( max-height:  520px)
     .hero
         &__scroll-down
@@ -94,9 +196,10 @@
             padding: 18px 38px
             font-size: 1.1rem
             margin-bottom: 2rem
+    &::after
+        display: none      
 @media screen and ( max-width:  420px)
     .menu
-        
         justify-content: space-between
         &__contacts
            
@@ -165,6 +268,41 @@
             font-weight: normal
             font-size: 1.22rem
             margin-bottom: 3.2rem
+    .row
+        align-items: flex-end
+        margin: auto
+    .col-50
+        width: 100%
+    .col-60
+        width: 100%
 
-        
-   
+    .section
+        &-title
+            &__heading
+                &--primary  
+                    font-size: 1.7rem 
+                    margin-bottom: 1.6rem     
+            &__word
+                &::after
+                    display: none
+            &__text
+                max-width: 302px
+                font-size: 1.18rem
+                line-height: 1.6        
+    .row
+        flex-direction: column  
+        align-items: center    
+    .swiper
+        &-slide
+            &__text
+                flex-basis: 42% 
+                &:last-child
+                    margin-bottom: 4.9rem  
+            &__heading
+                margin-right: 1rem
+                font-weight: 500
+                font-size: 1.19rem
+            &__value
+                font-size: 1.18rem 
+
+                 
