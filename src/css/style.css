@@ -954,6 +954,8 @@ img {
     margin-bottom: 2.28rem; } }
 
 @media screen and (max-width: 1150px) {
+  .section--dark {
+    display: none; }
   .nav {
     width: 100%;
     max-width: 420px; }
