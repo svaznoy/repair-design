@@ -832,8 +832,10 @@ img {
     max-width: 55rem;
     margin: auto; }
   .control__input {
+    outline: none;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+    color: #131313;
+    border-bottom: 1px solid rgba(19, 19, 19, 0.5); }
   .control__label {
     margin-bottom: -7px; }
   .control__input-group {
