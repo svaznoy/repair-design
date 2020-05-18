@@ -32,7 +32,8 @@
             &-active
                 background-color: $light
     &-button
-        &-prev, &-next
+        &-prev1, &-next1
+            display: flex
             bottom: 0
             top: auto
             background-size: 42px
@@ -40,10 +41,10 @@
             height: 14px
             &::after
                 display: none
-        &-prev  
+        &-prev1  
             background: url(../img/arrow-prev.svg) no-repeat center
             left: -1px 
-        &-next
+        &-next1
             background: url(../img/arrow-next.svg) no-repeat center          
 .swiper-scrollbar
     background: none 

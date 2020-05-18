@@ -57,29 +57,55 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     //initialize swiper when document ready
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper ('.swiper', {
       // Optional parameters
       loop: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         type: 'bullets',
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next1',
+        prevEl: '.swiper-button-prev1',
       },
     });
 
-    var nextBtn = $('.swiper-button-next');
-    var prevBtn = $('.swiper-button-prev');
-    var bullets = $('.swiper-pagination');
+    var nextBtn1 = $('.swiper-button-next1');
+    var prevBtn1 = $('.swiper-button-prev1');
+    var bullets1 = $('.swiper-pagination1');
 
 
-    nextBtn.css('left', prevBtn.width() + 20 + bullets.width() + 20);
-    bullets.css('left', prevBtn.width() + 20);
+    nextBtn1.css('left', prevBtn1.width() + 20 + bullets1.width() + 20);
+    bullets1.css('left', prevBtn1.width() + 20);
 
+  
     
   });
+
+  $(document).ready(function () {
+    //initialize swiper when document ready 
+    let mySwiper = new Swiper ('.swiper-container2', {
+      // Optional parameters
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination2',
+        type: 'bullets',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
+      },
+    });
+
+    var nextBtn2 = $('.swiper-button-next2');
+    var prevBtn2 = $('.swiper-button-prev2');
+    var bullets2 = $('.swiper-pagination2');
+
+    nextBtn2.css('left', prevBtn2.width() + 20 + bullets2.width() + 20);
+    bullets2.css('left', prevBtn2.width() + 20);
+
+});  
+
 
 $(document).ready(function(){
   /**
