@@ -14,15 +14,26 @@ img
     &-title
         text-align: center
         font-family: 'Yeseva One', cursive
-        text-transform: uppercase     
+        text-transform: uppercase 
+        &__word
+            display: flex
+            align-items: center
+            &::after
+                    content: ''
+                    width: 6.42rem
+                    height: 1px
+                    background: $primary
+                    margin-left: 2.4rem 
         &__heading
             line-height: 2.78rem
             &--primary
-            color: $primary
-            font-weight: 500
-            font-size: 1.74rem 
+                color: $primary
+                font-weight: 500
+                font-size: 1.74rem 
             &--primary
                 color: $primary
+            &__word
+                display: block        
         &__target
             font-size: 1.92rem
             font-weight: 500
