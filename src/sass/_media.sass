@@ -100,6 +100,36 @@
         &-wraper
             &__image 
                 max-width: 100% 
+    .control
+        background-color: $dark
+        padding-bottom: 8.7rem
+        &__section-title
+            margin-bottom: 2.214rem
+            margin-top: -20rem
+        &__video
+            background-size: cover
+            max-width: 40.37rem
+            min-height: 25rem
+            margin-bottom: 3rem  
+        &__text
+            color: $light 
+            max-width: 34.785rem
+        &__form
+            flex-direction: column 
+        &__label
+            padding-bottom: 5px
+            color: rgba($light, 0.5)
+        &__input
+            margin-bottom: 2rem
+            &::placeholder
+                color: $light
+        &__button
+            margin: auto
+            width: 60%
+        &__policy-label
+            color: $light
+                 
+
 @media screen and ( max-width:  620px)
     .row
         align-items: flex-end
@@ -248,6 +278,7 @@
                 margin-bottom: 0.4rem   
               
     .types
+        padding-top: 5rem
         &__section-title
             margin-bottom: 3rem
         &__card
@@ -308,7 +339,49 @@
             &__value
                 font-size: 1.18rem 
 
-.swipe
-    &-wraper
-        &__image
-            margin-top: 2.4rem              
+    .swipe
+        &-wraper
+            &__image
+                margin-top: 2.4rem   
+
+    .section
+        &__control
+            margin-bottom: 1.6rem
+    .video__play  
+        max-width: 19%      
+    .control
+        padding-bottom: 0
+        &__video
+            margin-top: 3.2rem
+            min-height: 17rem
+        &__text
+            text-align: center
+            font-size: 1.16rem
+            line-height: 176%
+            margin-bottom: 2rem
+            &::before
+                margin-bottom: 1.1rem   
+        &__label
+            font-size: 1.25rem
+            padding-bottom: 5px
+            color: rgba($light, 0.5)
+        &__input
+            margin-bottom: 0
+            font-size: 1.5rem
+            &::placeholder
+                color: $light 
+        &__input-group 
+            margin-bottom: 4.6rem 
+            &--mobile  
+                margin-bottom: 0   
+        &__policy
+            margin-top: 0.8rem
+            margin-bottom: 2rem
+            &-label
+                justify-content: start
+                margin-bottom: 3rem
+                font-size: 1.33rem 
+        &__button
+            margin-bottom: -1.5rem
+            order: 5
+            width: 100%          
