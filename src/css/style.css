@@ -7,6 +7,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between; }
+  .row__people {
+    margin-bottom: 3.78rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
 
 .col-32 {
   flex-basis: 30%; }
@@ -24,6 +29,9 @@
 
 .col-70 {
   width: 70%; }
+
+.col-30 {
+  flex-basis: 30%; }
 
 @font-face {
   font-family: 'Futura Book';
@@ -358,6 +366,9 @@ body {
 img {
   max-width: 100%; }
 
+.section__types--light {
+  color: #FFFFFF; }
+
 .section--dark {
   background: #131313; }
 
@@ -365,6 +376,13 @@ img {
   text-align: center;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase; }
+  .section-title__people {
+    font-family: 'Futura Book', sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center; }
   .section-title__word {
     display: flex;
     align-items: center; }
@@ -935,7 +953,7 @@ img {
 
 .target {
   margin-top: -159px;
-  padding-bottom: 5rem;
+  padding-bottom: 35.78rem;
   margin-bottom: 3rem; }
 
 .col-30--right {
@@ -1066,6 +1084,12 @@ img {
     padding: 16px 28px;
     align-self: flex-end; }
 
+.invalid {
+  color: red; }
+
+.input.invalid {
+  border-bottom: 1px solid red; }
+
 #arrow {
   position: fixed;
   left: 50%;
@@ -1081,6 +1105,86 @@ img {
   background: url(../img/arrow.jpg) no-repeat 7px 11px #ffffff;
   border-radius: 4px;
   cursor: pointer; }
+
+.wrap {
+  display: flex;
+  justify-content: center; }
+
+.people {
+  margin-top: -30rem;
+  padding-bottom: 5rem; }
+  .people__description {
+    margin: auto;
+    max-width: 32rem;
+    margin-top: 1.4rem;
+    margin-bottom: 5.8rem;
+    color: #FFFFFF; }
+    .people__description--company {
+      max-width: 39.785rem;
+      margin: auto;
+      text-align: center;
+      font-size: 1.428rem;
+      line-height: 2.4rem;
+      margin-bottom: 4.6rem; }
+      .people__description--company::before {
+        display: block;
+        margin: auto;
+        content: '';
+        width: 55px;
+        height: 2px;
+        background-color: #E3B873;
+        border-radius: 2px;
+        margin-bottom: 1rem; }
+  .people-card-25 {
+    flex-basis: 30%; }
+  .people-text {
+    position: relative;
+    margin-top: -85px;
+    margin-left: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    max-width: 233px; }
+    .people-text__title {
+      font-family: 'Yeseva One', cursive;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 0; }
+    .people-text__profession {
+      color: #959595;
+      font-family: 'Futura Book', sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 1.2rem; }
+  .people__button {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #E3B873;
+    padding: 12px 24px;
+    margin-top: 0rem; }
+
+.box--left {
+  display: flex;
+  position: relative;
+  margin-right: -34px;
+  margin-top: -34px; }
+
+.box-image {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: #E3B873;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") center no-repeat;
@@ -1140,6 +1244,9 @@ img {
     margin-bottom: 2.28rem; } }
 
 @media screen and (max-width: 1150px) {
+  .section-people {
+    padding-top: 25rem;
+    background: #131313; }
   .target {
     display: none; }
   .nav {
@@ -1151,14 +1258,20 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    .row__people {
+      flex-direction: column; }
   .col-50 {
     width: 50%;
     margin-right: auto;
     margin-left: auto; }
   .swipe-wraper__image {
     margin-top: 1rem; }
-  .swipe-slide__heading {
-    max-width: 100px; } }
+  .row__people {
+    margin-bottom: 0; }
+  .people-card-25 {
+    margin-bottom: 6.8rem; }
+  .people__description--company {
+    color: #FFFFFF; } }
 
 @media screen and (max-width: 1000px) {
   .nav {
@@ -1414,9 +1527,11 @@ img {
     width: 100%; }
   .col-60 {
     width: 100%; }
-  .section-title__heading--primary {
-    font-size: 1.7rem;
-    margin-bottom: 1.6rem; }
+  .section-title__heading {
+    font-size: 1.8rem; }
+    .section-title__heading--primary {
+      font-size: 1.7rem;
+      margin-bottom: 1.6rem; }
   .section-title__word::after {
     display: none; }
   .section-title__text {
@@ -1438,7 +1553,7 @@ img {
     font-size: 1.18rem; }
   .swipe-wraper__image {
     margin-top: 2.4rem; }
-  .section__control {
+  .swipe__control {
     margin-bottom: 1.6rem; }
   .video__play {
     max-width: 19%; }
@@ -1485,4 +1600,20 @@ img {
     .control__button {
       margin-bottom: -1.5rem;
       order: 5;
-      width: 100%; } }
+      width: 100%; }
+  .wrap {
+    display: flex;
+    justify-content: start; }
+  -card-25 {
+    width: 100%; }
+  .people__description {
+    max-width: 27rem;
+    line-height: 1.4;
+    font-size: 1.25rem; }
+    .people__description--company {
+      display: none; }
+  .people-text {
+    margin-left: 2rem; }
+  .image-people {
+    flex-shrink: 0;
+    width: 100%; } }

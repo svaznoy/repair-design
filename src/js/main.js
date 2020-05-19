@@ -52,29 +52,45 @@ $(document).ready(function () {
         }
     });
 
+    $(".modal__form").validate({
+      errorClass: "invalid",
+      rules: {
+        // simple rule, converted to {required:true}
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: "required",
+        
+        // compound rule
+        userEmail: {
+          required: true,
+          emails: true
+        }
+      },
+      messages: {
+        userName: {
+          required: "Заполните Имя",
+          minlength: "имя не короче 2х символов",
+          maxlength: "Имя не больше 15ти символов"
+        },
+
+        userPhone: "Заполните поле телефон",
+        userEmail: {
+          required: "Заполните поле email",
+          email: "Введите корректный email name@domain.com"
+        }
+      }
+    });
+
+    //Маска для телефона
+
+    $('[type=tel]').mask('+7 (000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+
     
 
 });
-
-$(".modal__form").validate({
-  rules: {
-    // simple rule, converted to {required:true}
-    name: "required",
-    // compound rule
-    email: {
-      required: true,
-      email: true
-    },
-    messages: {
-      name: "Имя обязательно",
-      email: {
-        required: "Обязательно укажите email",
-        email: "Введите в формате name@domain.com"
-      }
-    }
-  }
-});
-
 
 
 $(document).ready(function () {

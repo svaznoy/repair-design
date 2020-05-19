@@ -799,6 +799,97 @@
         <!-- /.container -->
       </div>
       <!-- /.section section--dark target -->
+      
+      <div class="section-people people people--dark">
+        <div class="container">
+          <div class="section-title types__section-title">
+            <h2 class="section-title__heading section__types--light">Наша команда</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="./img/head.svg" alt="vector">
+            </div>
+            <!-- /.section-title__image -->
+            <p class="section-title__people people__description">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
+          </div>
+          <!-- /.section-title -->
+          <div class="row__people">
+            <div class="people-card-25">
+              <div class="wrap">
+                <div class="box--left box-image">
+                  <img src="./img/head-people.svg" alt="head">
+                </div>
+                <!-- /.box-image -->
+                <div class="card-container">
+                  <img src="./img/people1.png" class="image-people" alt="people">
+                  <div class="people-text">
+                    <h4 class="people-text__title">Алексей Колмаков</h4>
+                        <!-- /.people-text__title -->
+                        <span class="people-text__profession">Проектный менеджер</span> <!-- /.people-text__profession -->
+                        <span class="people__button">ОПыт работы 8 лет</span> <!-- /.people__button -->
+                  </div>
+                  <!-- /.people-text -->
+              </div>
+              <!-- /.wrap -->
+              </div>
+              <!-- /.card-container -->
+            </div>
+            <!-- /.people-card-25 -->
+            <div class="people-card-25">
+              <div class="wrap">
+                <div class="box--left box-image">
+                  <img src="./img/penc.svg" alt="pencil">
+                </div>
+                <!-- /.box-image -->
+                <div class="card-container">
+                  <img src="./img/people2.png" class="image-people" alt="people">
+                  <div class="people-text">
+                    <h4 class="people-text__title">Алиса Сухорукова</h4>
+                        <!-- /.people-text__title -->
+                        <span class="people-text__profession">Дизайнер</span> <!-- /.people-text__profession -->
+                        <span class="people__button">ОПыт работы 7 лет</span> <!-- /.people__button -->
+                  </div>
+                  <!-- /.people-text -->
+              </div>
+              <!-- /.wrap -->
+              </div>
+              <!-- /.card-container -->
+            </div>
+            <!-- /.people-card-25 -->
+            <div class="people-card-25">
+              <div class="wrap">
+                <div class="box--left box-image">
+                  <img src="./img/case.svg" alt="case">
+                </div>
+                <!-- /.box-image -->
+                <div class="card-container">
+                  <img src="./img/people3.png" class="image-people" alt="people">
+                  <div class="people-text">
+                    <h4 class="people-text__title">Давид Волынев</h4>
+                        <!-- /.people-text__title -->
+                        <span class="people-text__profession">Бригадир</span> <!-- /.people-text__profession -->
+                        <span class="people__button">ОПыт работы 6 лет</span> <!-- /.people__button -->
+                  </div>
+                  <!-- /.people-text -->
+              </div>
+              <!-- /.wrap -->
+              </div>
+              <!-- /.card-container -->
+            </div>
+            <!-- /.people-card-25 -->
+          </div>
+          <p class="people__description--company">
+            Каждый сотрудник нашей компании является квалифицированным
+             штатным специалистом с опытом работы от 6 лет.
+             У нас нет  гастарбайтеров, каждый сотрудник выполняет работу,
+              соответствующую его специальности.
+          </p>
+          <!-- /.row__people -->
+        </div>
+        <!-- /.container -->
+      </div>
+        <!-- /.section people people--dark -->
+
+
     </main>
     <!-- /.main -->
     <div class="modal">
@@ -809,20 +900,20 @@
           Оставьте заявку и наш менеджер свяжется с вами
         </h3>
         <!-- /.modal__title -->
-        <form action="#" class="form modal__form">
+        <form action="#" class="form modal__form mainmodal" id="mainmodal">
           <div class="input-group modal__input-group">
             <label for="user-name" class="label form__label label--light">Имя</label>
-            <input type="text" name="name" class="input form__input modal__input input--light" id="user-name" autocomplete="off" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" autocomplete="off" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group modal__input-group -->
           <div class="input-group modal__input-group">
             <label for="user-phone" class="label form__label label--light">Телефон</label>
-            <input type="text" name="phone" class="input form__inpu modal__input input--light" id="user-phone" autocomplete="off" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__inpu modal__input input--light" id="user-phone" autocomplete="off" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group modal__input-group -->
           <div class="input-group modal__input-group">
             <label for="user-email" class="label form__label label--light">Email</label>
-            <input type="email" name="email" class="input form__input modal__input input--light" id="user-email" autocomplete="off" placeholder="Ваш email">
+            <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" autocomplete="off" placeholder="Ваш email">
           </div>
           <!-- /.input-group modal__input-group -->
           <div class="policy modal__policy">
@@ -917,6 +1008,7 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/main.js"></script>
     
   </body>

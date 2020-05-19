@@ -13,7 +13,11 @@
             max-width: 34rem
             margin-bottom: 2.28rem  
 
-@media screen and (max-width: 1150px) 
+@media screen and (max-width: 1150px)
+    .section
+        &-people 
+            padding-top: 25rem
+            background: $dark
     .target
         display: none
 
@@ -26,6 +30,10 @@
         flex-direction: column
         justify-content: center
         align-items: center
+        &__people
+            flex-direction: column
+            
+            
 
     .col-50
         width: 50%
@@ -37,8 +45,15 @@
                 margin-top: 1rem
         &-slide
             &__heading
-                max-width: 100px
-                
+    .row
+        &__people
+            margin-bottom: 0
+    .people
+        &-card-25
+            margin-bottom: 6.8rem 
+        &__description
+            &--company 
+                color: $light                          
 @media screen and ( max-width:  1000px)
     .nav
         display: none
@@ -337,6 +352,7 @@
     .section
         &-title
             &__heading
+                font-size: 1.8rem
                 &--primary  
                     font-size: 1.7rem 
                     margin-bottom: 1.6rem     
@@ -367,8 +383,7 @@
         &-wraper
             &__image
                 margin-top: 2.4rem   
-
-    .section
+  
         &__control
             margin-bottom: 1.6rem
     .video__play  
@@ -408,4 +423,33 @@
         &__button
             margin-bottom: -1.5rem
             order: 5
-            width: 100%          
+            width: 100% 
+    .wrap
+        display: flex
+        justify-content: start
+    &-card-25
+        width: 100%           
+
+    .people
+        &__description
+            max-width: 27rem
+            line-height: 1.4
+            font-size: 1.25rem  
+            &--company
+                display: none
+        &-text
+            margin-left: 2rem        
+    .image-people
+        flex-shrink: 0
+        width: 100%
+        
+                                
+    
+        
+        
+        
+        
+        
+
+                        
+                
