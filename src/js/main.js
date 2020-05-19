@@ -52,7 +52,29 @@ $(document).ready(function () {
         }
     });
 
+    
+
 });
+
+$(".modal__form").validate({
+  rules: {
+    // simple rule, converted to {required:true}
+    name: "required",
+    // compound rule
+    email: {
+      required: true,
+      email: true
+    },
+    messages: {
+      name: "Имя обязательно",
+      email: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате name@domain.com"
+      }
+    }
+  }
+});
+
 
 
 $(document).ready(function () {
@@ -78,13 +100,13 @@ $(document).ready(function () {
     nextBtn1.css('left', prevBtn1.width() + 20 + bullets1.width() + 20);
     bullets1.css('left', prevBtn1.width() + 20);
 
-  
+
     
   });
 
   $(document).ready(function () {
     //initialize swiper when document ready 
-    let mySwiper = new Swiper ('.swiper-container2', {
+    let mySwiper2 = new Swiper ('.swiper-container2', {
       // Optional parameters
       loop: true,
       pagination: {
@@ -104,7 +126,9 @@ $(document).ready(function () {
     nextBtn2.css('left', prevBtn2.width() + 20 + bullets2.width() + 20);
     bullets2.css('left', prevBtn2.width() + 20);
 
-});  
+
+}); 
+
 
 
 $(document).ready(function(){
@@ -117,7 +141,7 @@ $(document).ready(function(){
           $('#arrow').fadeIn();
       } else {
           $('#arrow').fadeOut();
-      }
+      } 
   });
   
   /** При нажатии на кнопку мы перемещаемся к началу страницы */
@@ -129,6 +153,7 @@ $(document).ready(function(){
   });
   
 });
+
 
 var wow = new WOW(
   {
@@ -146,6 +171,10 @@ var wow = new WOW(
   }
 );
 wow.init();
+
+
+
+
 
 
 
