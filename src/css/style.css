@@ -883,6 +883,9 @@ img {
 .section__types {
   color: #131313; }
 
+.show {
+  display: none; }
+
 .card__text {
   position: relative;
   max-width: 23.5rem;
@@ -1615,5 +1618,7 @@ img {
   .people-text {
     margin-left: 2rem; }
   .image-people {
-    flex-shrink: 0;
-    width: 100%; } }
+    min-width: 305px;
+    height: 357px;
+    -o-object-fit: cover;
+    object-fit: cover; } }
