@@ -403,6 +403,8 @@ img {
       font-size: 1.74rem; }
     .section-title__heading--primary {
       color: #E3B873; }
+    .section-title__heading--darken {
+      color: #131313; }
     .section-title__heading__word {
       display: block; }
   .section-title__target {
@@ -883,9 +885,6 @@ img {
 .section__types {
   color: #131313; }
 
-.show {
-  display: none; }
-
 .card__text {
   position: relative;
   max-width: 23.5rem;
@@ -1189,6 +1188,97 @@ img {
   background: #E3B873;
   box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
 
+.section-client {
+  padding-bottom: 35.2rem; }
+
+.row__client {
+  display: flex;
+  justify-content: space-between; }
+
+.client__heading {
+  margin: auto;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 1.42rem;
+  font-family: 'Futura Book', sans-serif;
+  text-align: center;
+  max-width: 320px;
+  margin-top: 1.7rem;
+  margin-bottom: 2.714rem; }
+
+.client-card {
+  position: relative;
+  flex-basis: 33%;
+  padding-top: 1.74rem;
+  padding-left: 1.42rem;
+  padding-right: 2.214rem;
+  padding-bottom: 4.5rem;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  max-width: 26.8rem; }
+  .client-card__box {
+    display: flex;
+    align-items: center; }
+
+.client__name {
+  display: inline-block;
+  text-align: left;
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.285rem;
+  line-height: 1.9rem; }
+
+.client__image {
+  margin-right: 1.62rem; }
+
+.client__review {
+  margin-top: 0;
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1.07rem;
+  max-width: 324px;
+  line-height: 184%; }
+
+.client-box {
+  margin-bottom: -30px; }
+  .client-box__span {
+    display: flex;
+    position: absolute;
+    bottom: -20px;
+    left: 0; }
+  .client-box__bottom1 {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.21rem;
+    line-height: 1.714rem;
+    color: #FFFFFF;
+    background: #E3B873;
+    padding: 11px 17px 11px 17px;
+    margin-right: 2px;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+    .client-box__bottom1::before {
+      content: '';
+      width: 32px;
+      height: 32px;
+      background: url(../img/linear.svg) center no-repeat;
+      margin-right: 1.07rem; }
+  .client-box__bottom2 {
+    display: flex;
+    align-items: center;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.21rem;
+    line-height: 1.714rem;
+    color: #FFFFFF;
+    background: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    padding: 11px 26px 11px 15px; }
+    .client-box__bottom2::before {
+      content: '';
+      width: 32px;
+      height: 32px;
+      background: url(../img/linear.svg) center no-repeat;
+      margin-right: 1.07rem; }
+
 .footer {
   background: #131313 url("../img/footer-bg.jpg") center no-repeat;
   background-size: cover; }
@@ -1196,6 +1286,7 @@ img {
     background: #181818;
     max-width: 63.07rem;
     margin: auto;
+    margin-top: -20rem;
     margin-bottom: 3.714rem;
     padding: 2.5rem 0; }
   .footer__title {
@@ -1234,6 +1325,29 @@ img {
   .footer-menu {
     padding: 4.285rem 0;
     background: #131313; }
+  .footer__map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+    margin-top: 1rem; }
+  .footer__title-map {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #E3B873;
+    text-align: center;
+    font-size: 1.428rem;
+    max-width: 33rem;
+    line-height: 2rem;
+    margin-bottom: 2rem; }
+  .footer__link {
+    margin-bottom: 3rem; }
+  .footer__email-link {
+    margin-right: 1.07rem; }
+  .footer__main-map {
+    max-width: 925px;
+    min-height: 465px; }
 
 @media screen and (max-width: 1290px) {
   html {
@@ -1274,7 +1388,20 @@ img {
   .people-card-25 {
     margin-bottom: 6.8rem; }
   .people__description--company {
-    color: #FFFFFF; } }
+    color: #FFFFFF; }
+  .section-client {
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+  .row__client {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .client__section-title {
+    margin-bottom: 3rem; }
+  .client__heading {
+    display: none; }
+  .client-card {
+    margin-bottom: 5rem; } }
 
 @media screen and (max-width: 1000px) {
   .nav {
@@ -1621,4 +1748,8 @@ img {
     min-width: 305px;
     height: 357px;
     -o-object-fit: cover;
-    object-fit: cover; } }
+    object-fit: cover; }
+  .footer__main-map {
+    order: -1;
+    max-width: 340px;
+    min-height: 255px; } }

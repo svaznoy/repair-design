@@ -53,7 +53,27 @@
             margin-bottom: 6.8rem 
         &__description
             &--company 
-                color: $light                          
+                color: $light 
+
+    .section
+        &-client
+            padding-top: 5rem
+            padding-bottom: 5rem
+
+    .row
+        &__client
+            display: flex
+            align-items: center
+            flex-direction: column 
+
+    .client
+        &__section
+            &-title
+                margin-bottom: 3rem
+        &__heading
+            display: none
+        &-card
+            margin-bottom: 5rem                                           
 @media screen and ( max-width:  1000px)
     .nav
         display: none
@@ -443,6 +463,14 @@
         min-width: 305px
         height: 357px
         object-fit: cover
+
+    .footer
+        &__main
+            &-map
+                order: -1
+                max-width: 340px
+                min-height: 255px
+             
         
         
                                 
