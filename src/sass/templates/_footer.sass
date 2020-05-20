@@ -1,12 +1,15 @@
 .footer
     background: $dark url('../img/footer-bg.jpg') center no-repeat
     background-size: cover
+    position: absolute
+    width: 100%
     &__wrap
+        position: relative
         background: $black
         max-width: 63.07rem
         margin: auto
-        margin-top: -20rem
-        margin-bottom: 3.714rem
+        margin-top: -15.85rem
+        margin-bottom: 2.414rem
         padding: 2.5rem 0
     &__title
         text-transform: uppercase
@@ -34,6 +37,10 @@
             &--full-width
                 flex-basis: 100%
                 margin-bottom: 2rem
+    &__email-image  
+        width: 29px 
+    &__instagram-image 
+        width: 29px             
     &__policy
         flex-basis: 100%
         margin-bottom: 3.6rem
@@ -42,13 +49,13 @@
         padding: 1.42rem 4.45rem
         margin: auto 
     &-menu
-        padding: 4.285rem 0
+        padding: 3.5rem 0
         background: $dark  
     &__map
         display: flex
         flex-direction: column
         align-items: center
-        padding-bottom: 4rem
+        padding-bottom: 5rem
         margin-top: 1rem
     &__title-map  
         font-family: 'Yeseva One', cursive
@@ -61,14 +68,12 @@
         line-height: 2rem
         margin-bottom: 2rem
     &__link
-        margin-bottom: 3rem    
+        margin-bottom: 2.7rem    
     &__email-link
         margin-right: 1.07rem
-    &__main
-        &-map
-            max-width: 925px
-            min-height: 465px
-        
+.map
+    max-width: 925px
+    min-height: 465px       
                  
 
 

@@ -65,6 +65,7 @@
             display: flex
             align-items: center
             flex-direction: column 
+            padding-bottom: 15rem
 
     .client
         &__section
@@ -73,7 +74,9 @@
         &__heading
             display: none
         &-card
-            margin-bottom: 5rem                                           
+            margin-bottom: 5rem 
+
+                                                  
 @media screen and ( max-width:  1000px)
     .nav
         display: none
@@ -237,8 +240,12 @@
         background: $darkbgc 
 
     .section
+        &-people
+            padding-bottom: 20rem
         &-title 
-            color: $light  
+            color: $light 
+        &-client
+            display: none 
     .col-50
         width: 100%
    
@@ -278,6 +285,7 @@
 @media screen and ( max-height:  560px) 
     .col-50
         width: 60%
+                    
 @media screen and ( max-height:  520px)
     .hero
         &__scroll-down
@@ -291,6 +299,7 @@
     &::after
         display: none      
 @media screen and ( max-width:  420px)
+    
     .menu
         justify-content: space-between
         &__contacts
@@ -305,6 +314,7 @@
             font-size: 1.02rem
             margin-right: 0
     .hero
+        padding-bottom: 1rem
         &__content
             margin-right: 0rem  
         &__title
@@ -329,13 +339,16 @@
             font-size: 1.1rem
             font-weight: 300
             padding: 18px 0
+    .product
+        &__position 
+           padding-top: 1rem      
     .section
         &-title
             &__heading
                font-size: 1.8rem 
             &__image
                 margin-bottom: 0.4rem   
-              
+             
     .types
         padding-top: 5rem
         &__section-title
@@ -370,6 +383,10 @@
         width: 100%
 
     .section
+        &-people
+            padding-bottom: 2rem
+        &-client
+            display: none
         &-title
             &__heading
                 font-size: 1.8rem
@@ -385,7 +402,9 @@
                 line-height: 1.6        
     .row
         flex-direction: column  
-        align-items: center    
+        align-items: center 
+        &__client
+            padding-bottom: 15rem   
     .swiper
         &-slide
             &__text
@@ -463,14 +482,23 @@
         min-width: 305px
         height: 357px
         object-fit: cover
-
     .footer
-        &__main
-            &-map
-                order: -1
-                max-width: 340px
-                min-height: 255px
-             
+        padding-bottom: 30rem
+        &__wrap
+            margin-top: 0
+            margin-bottom: 1.6rem
+        &__title-map  
+            font-size: 1.5rem 
+            max-width: 26.285rem 
+        &__link
+            display: flex    
+        &__email-image
+            margin-right: 1rem
+            width: 39px
+        &__instagram-image
+            width: 39px  
+ 
+        
         
         
                                 
