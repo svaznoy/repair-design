@@ -162,6 +162,8 @@ $(document).ready(function () {
   });
 
 
+  
+
   $("[type=tel]").mask("+7 (000) 00-00-000", {
     placeholder: "+7 (___) __-__-___",
   });
@@ -227,6 +229,40 @@ $(document).ready(function () {
 
 
 });
+
+//control checkbox
+$(function(){
+  $('#policy-checkbox').on('change', function(){
+  if($('#policy-checkbox').prop('checked')){
+  $('#submitcontrol').attr('disabled', false);
+  }else{
+  $('#submitcontrol').attr('disabled', true);
+  }
+  });
+ });
+
+
+//modal checkbox
+$(function(){
+  $('#modal-checkbox').on('change', function(){
+  if($('#modal-checkbox').prop('checked')){
+  $('#submitmodal').attr('disabled', false);
+  }else{
+  $('#submitmodal').attr('disabled', true);
+  }
+  });
+ });
+
+//footer checbox
+ $(function(){
+  $('#footer-checkbox').on('change', function(){
+  if($('#footer-checkbox').prop('checked')){
+  $('#submitfooter').attr('disabled', false);
+  }else{
+  $('#submitfooter').attr('disabled', true);
+  }
+  });
+ });
 
 
 $(document).ready(function () {
