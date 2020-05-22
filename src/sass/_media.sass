@@ -76,7 +76,7 @@
         &-card
             margin-bottom: 5rem 
 
-                                                  
+                                            
 @media screen and ( max-width:  1000px)
     .nav
         display: none
@@ -278,11 +278,18 @@
         &__label  
             &--center
                 font-size: 1.33rem
-                justify-content: flex-start                  
+                justify-content: flex-start   
+
+    .map
+        order: -1 
+        max-width: 340px
+        max-height: 255px  
+                                   
 @media screen and ( max-height:  560px) 
     .col-50
         width: 60%
-                    
+    
+                       
 @media screen and ( max-height:  520px)
     .hero
         &__scroll-down
@@ -294,7 +301,9 @@
             font-size: 1.1rem
             margin-bottom: 2rem
     &::after
-        display: none      
+        display: none
+
+            
 @media screen and ( max-width:  420px)
     
     .menu
@@ -381,7 +390,7 @@
 
     .section
         &-people
-            padding-bottom: 2rem
+            padding-bottom: 0rem
         &-client
             display: none
         &-title

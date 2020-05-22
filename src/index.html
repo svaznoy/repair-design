@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8bc46eae-1a4d-44a8-8a15-8aa8fac320ee&lang=ru_RU" type="text/javascript">
     </script>
+    </script>
   </head>
 
   <body>
@@ -61,7 +62,7 @@
             <button class="button hero__button button--primary" data-toggle="modal">Рассчитать стоимость
             </button>
             <!-- /.button hero__button -->
-            <button class="button hero__button-outline button--outline" data-toggle="modal">
+            <button class="button hero__button-outline button--outline"  data-toggle="modal">
               Оставить заявку
             </button>
             <!-- /.button hero__button -->
@@ -273,7 +274,7 @@
             </div>
             <!-- /.policy -->
             <button
-              class="button button--primary control__button wow animate__pulse" data-wow-delay="5s" data-wow-iteration="2" data-toggle="control">
+              class="button button--primary control__button wow animate__pulse"  id="submitcontrol" data-wow-delay="5s" data-wow-iteration="2" data-toggle="control">
               Отправить
             </button>
             <!-- /.button button_primary -->
@@ -1014,7 +1015,7 @@
             
           </div>
           <!-- /.policy -->
-          <button class="button button--primary modal__button" >
+          <button class="button button--primary modal__button" id="submitmodal" >
             Отправить заявку
           </button>
           <!-- /.button button_primary -->
@@ -1054,7 +1055,7 @@
               <label for="footer-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
             </div>
             <!-- /.policy -->
-            <button class="button button--primary footer__button" data-toggle="footer">
+            <button class="button button--primary footer__button" id="submitfooter" data-toggle="footer">
               Отправить
             </button>
             <!-- /.button button_primary -->
