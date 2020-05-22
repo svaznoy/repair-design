@@ -93,6 +93,7 @@ $(document).ready(function () {
       errorClass: "invalid",
       errorElement: "div",
       rules: {
+
         // simple rule, converted to {required:true}
         userNameControl: {
           required: true,
@@ -103,6 +104,8 @@ $(document).ready(function () {
           required: true,
           minlength: 18
         },
+
+        
   
         
       },
