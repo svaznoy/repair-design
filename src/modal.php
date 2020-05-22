@@ -38,8 +38,12 @@ try {
 
     
 
-    $mailmodal->send();
-    header('location:thanks.html');
+    if ($mailmodal->send()) {
+        echo "ok";
+    }  else {
+        echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    }
+
 } catch (Exception $e) {
     echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mailmodal->ErrorInfo}";
 }

@@ -27,9 +27,17 @@
 // });
 
 $(document).ready(function () {
+  var success = $(".success");
+  var controlForm = $("#submitcontrol");
+  var footerButton = $("#submitfooter");
+  var close = $(".success__close");
+  var modalCl = $("#submitmodal");
+
   var modal = $(".modal"),
     modalBtn = $("[data-toggle=modal]"),
     modalClose = $(".modal__close");
+
+
 
   modalBtn.on("click", function () {
     modal.toggleClass("modal--visible");
@@ -37,6 +45,26 @@ $(document).ready(function () {
   modalClose.on("click", function () {
     modal.toggleClass("modal--visible");
   });
+
+  //Закрытие благодарности
+  modalCl.on("click", function () {
+    success.toggleClass("success--visible");
+  });
+
+  controlForm.on("click", function() {
+    success.toggleClass("success--visible");
+  });
+
+  footerButton.on("click", function() {
+    success.toggleClass("success--visible");
+  });
+
+  close.on("click", function () {
+    success.removeClass("success--visible");
+  });
+
+
+
   //Закрытие модалки по клику вне области модального окна
   $(document).click(function (e) {
     if ($(e.target).is(".modal")) {
@@ -48,10 +76,9 @@ $(document).ready(function () {
     if (event.key === "Escape" || event.key === "Esc" || event.key === 27) {
       modal.toggleClass("modal--visible");
     }
-    });
   });
 
-  $().ready(function() {
+  $().ready(function () {
     $(".modal__form").validate({
       errorClass: "invalid",
       errorElement: "div",
@@ -66,7 +93,7 @@ $(document).ready(function () {
           required: true,
           minlength: 18
         },
-  
+
         // compound rule
         userEmailModal: {
           required: true,
@@ -79,16 +106,34 @@ $(document).ready(function () {
           minlength: "имя не короче 2х символов",
           maxlength: "Имя не больше 15ти символов",
         },
-  
+
         userPhoneModal: "Заполните Телефон",
-         
+
         userEmailModal: {
           required: "Заполните поле email",
           email: "Введите корректный email name@domain.com",
         }
       },
+
+      submitHandler: function (form) {
+        $.ajax({
+
+          type: "POST",
+          url: "modal.php",
+          data: $(form).serialize(),
+          success: function (responce) {
+            console.log('ajax' + responce);
+            $(form)[0].reset();
+            modal.removeClass("modal--visible");
+          }
+
+        });
+
+      }
+
+
     });
-  
+
     $(".control__form").validate({
       errorClass: "invalid",
       errorElement: "div",
@@ -105,9 +150,9 @@ $(document).ready(function () {
           minlength: 18
         },
 
-        
-  
-        
+
+
+
       },
       messages: {
         userNameControl: {
@@ -115,12 +160,29 @@ $(document).ready(function () {
           minlength: "имя не короче 2х символов",
           maxlength: "Имя не больше 15ти символов",
         },
-  
-        userPhoneControl: "Заполните Телефон",  
+
+        userPhoneControl: "Заполните Телефон",
       },
+
+      submitHandler: function (form) {
+        $.ajax({
+
+          type: "POST",
+          url: "fcontrol.php",
+          data: $(form).serialize(),
+          success: function (responce) {
+            console.log('ajax' + responce);
+            $(form)[0].reset();
+          }
+
+        });
+
+      }
+
+
     });
-  
-    
+
+
     $(".footer__form").validate({
       errorClass: "invalid",
       errorElement: "div",
@@ -135,14 +197,14 @@ $(document).ready(function () {
           required: true,
           minlength: 18
         },
-  
+
         userQuestionForm: {
           required: true,
           minlength: 10,
           maxlength: 100
-        }, 
-  
-        
+        },
+
+
       },
       messages: {
         userNameForm: {
@@ -150,124 +212,146 @@ $(document).ready(function () {
           minlength: "имя не короче 2х символов",
           maxlength: "Имя не больше 15ти символов",
         },
-  
-        userPhoneForm: "Заполните Телефон", 
-  
+
+        userPhoneForm: "Заполните Телефон",
+
         userQuestionForm: {
           required: "Нам важен ваш вопрос",
           minlength: "Вопрос не короче 10 символов",
           maxlength: "Вопрос не больше 100 символов",
         },
-        
-          
+
+
       },
 
+      submitHandler: function (form) {
+        $.ajax({
+
+          type: "POST",
+          url: "footer.php",
+          data: $(form).serialize(),
+          success: function (responce) {
+            console.log('ajax' + responce);
+            $(form)[0].reset();
+          }
+
+        });
+
+      }
+
+    });
+
+
+
+
+    $("[type=tel]").mask("+7 (000) 00-00-000", {
+      placeholder: "+7 (___) __-__-___",
+    });
+
+
+
   });
 
-
-  
-
-  $("[type=tel]").mask("+7 (000) 00-00-000", {
-    placeholder: "+7 (___) __-__-___",
-  });
 
 
 
 });
 
 
+
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
-          center: [55.757891, 37.637973],
-          zoom: 11
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
+      center: [55.757891, 37.637973],
+      zoom: 11
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
 
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
+    // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
 
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Где тоут работаю',
-          balloonContent: 'Скоро опять на работу((('
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/smart.svg',
-          // Размеры метки.
-          iconImageSize: [30, 42],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      }),
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: 'Где тоут работаю',
+      balloonContent: 'Скоро опять на работу((('
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/smart.svg',
+      // Размеры метки.
+      iconImageSize: [30, 42],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-5, -38]
+    }),
 
-      myPlacemarkWithContent = new ymaps.Placemark([
-        55.797669, 37.938750], {
-          hintContent: 'Закрыто на карантин))))',
-          balloonContent: 'Когда нибудь откроют!)))',
-          iconContent: '12'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#imageWithContent',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/avatar.svg',
-          // Размеры метки.
-          iconImageSize: [48, 48],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-24, -24],
-          // Смещение слоя с содержимым относительно слоя с картинкой.
-          iconContentOffset: [15, 15],
-          // Макет содержимого.
-          iconContentLayout: MyIconContentLayout
-      });
+    myPlacemarkWithContent = new ymaps.Placemark([
+      55.797669, 37.938750
+    ], {
+      hintContent: 'Закрыто на карантин))))',
+      balloonContent: 'Когда нибудь откроют!)))',
+      iconContent: '12'
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/avatar.svg',
+      // Размеры метки.
+      iconImageSize: [48, 48],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-24, -24],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [15, 15],
+      // Макет содержимого.
+      iconContentLayout: MyIconContentLayout
+    });
 
   myMap.geoObjects
-      .add(myPlacemark)
-      .add(myPlacemarkWithContent);
+    .add(myPlacemark)
+    .add(myPlacemarkWithContent);
 });
 
 
 
 
 //control checkbox
-$(function(){
-  $('#policy-checkbox').on('change', function(){
-  if($('#policy-checkbox').prop('checked')){
-  $('#submitcontrol').attr('disabled', false);
-  }else{
-  $('#submitcontrol').attr('disabled', true);
-  }
+$(function () {
+  $('#policy-checkbox').on('change', function () {
+    if ($('#policy-checkbox').prop('checked')) {
+      $('#submitcontrol').attr('disabled', false);
+    } else {
+      $('#submitcontrol').attr('disabled', true);
+    }
   });
- });
+});
 
 
 //modal checkbox
-$(function(){
-  $('#modal-checkbox').on('change', function(){
-  if($('#modal-checkbox').prop('checked')){
-  $('#submitmodal').attr('disabled', false);
-  }else{
-  $('#submitmodal').attr('disabled', true);
-  }
+$(function () {
+  $('#modal-checkbox').on('change', function () {
+    if ($('#modal-checkbox').prop('checked')) {
+      $('#submitmodal').attr('disabled', false);
+    } else {
+      $('#submitmodal').attr('disabled', true);
+    }
   });
- });
+});
 
 //footer checbox
- $(function(){
-  $('#footer-checkbox').on('change', function(){
-  if($('#footer-checkbox').prop('checked')){
-  $('#submitfooter').attr('disabled', false);
-  }else{
-  $('#submitfooter').attr('disabled', true);
-  }
+$(function () {
+  $('#footer-checkbox').on('change', function () {
+    if ($('#footer-checkbox').prop('checked')) {
+      $('#submitfooter').attr('disabled', false);
+    } else {
+      $('#submitfooter').attr('disabled', true);
+    }
   });
- });
+});
 
 
 $(document).ready(function () {
@@ -331,8 +415,7 @@ $(document).ready(function () {
 
   /** При нажатии на кнопку мы перемещаемся к началу страницы */
   $("#arrow").click(function () {
-    $("body,html").animate(
-      {
+    $("body,html").animate({
         scrollTop: 0,
       },
       500
@@ -355,6 +438,3 @@ var wow = new WOW({
   resetAnimation: true, // reset animation on end (default is true)
 });
 wow.init();
-
-
-
