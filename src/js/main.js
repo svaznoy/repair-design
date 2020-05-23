@@ -32,7 +32,7 @@ $(document).ready(function () {
   var footerButton = $("#submitfooter");
   var close = $(".success__close");
   var modalCl = $("#submitmodal");
-
+  var valute;
   var modal = $(".modal"),
     modalBtn = $("[data-toggle=modal]"),
     modalClose = $(".modal__close");
@@ -46,22 +46,7 @@ $(document).ready(function () {
     modal.toggleClass("modal--visible");
   });
 
-  //Закрытие благодарности
-  modalCl.on("click", function () {
-    success.toggleClass("success--visible");
-  });
-
-  controlForm.on("click", function() {
-    success.toggleClass("success--visible");
-  });
-
-  footerButton.on("click", function() {
-    success.toggleClass("success--visible");
-  });
-
-  close.on("click", function () {
-    success.removeClass("success--visible");
-  });
+  
 
 
 
@@ -122,12 +107,17 @@ $(document).ready(function () {
           url: "modal.php",
           data: $(form).serialize(),
           success: function (responce) {
-            console.log('ajax' + responce);
             $(form)[0].reset();
-            modal.removeClass("modal--visible");
+            modal.removeClass('modal--visible');
+            success.toggleClass('success--visible');
+            close.on('click', function() {
+            success.removeClass('success--visible');
+            });
+
           }
 
         });
+      
 
       }
 
@@ -166,16 +156,24 @@ $(document).ready(function () {
 
       submitHandler: function (form) {
         $.ajax({
-
+          
           type: "POST",
-          url: "fcontrol.php",
+          url: "control.php",
           data: $(form).serialize(),
-          success: function (responce) {
-            console.log('ajax' + responce);
+          success: function(responce) {
+
+            success.toggleClass('success--visible');
+
             $(form)[0].reset();
+
+            close.on('click', function() {
+             success.removeClass('success--visible');
+            });
+           
           }
 
         });
+        
 
       }
 
@@ -231,8 +229,15 @@ $(document).ready(function () {
           url: "footer.php",
           data: $(form).serialize(),
           success: function (responce) {
-            console.log('ajax' + responce);
+            
+            success.toggleClass('success--visible');
+
             $(form)[0].reset();
+
+            close.on('click', function() {
+             success.removeClass('success--visible');
+            });
+
           }
 
         });

@@ -41,7 +41,7 @@ try {
     if ($mailmodal->send()) {
         echo "ok";
     }  else {
-        echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+        echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mailmodal->ErrorInfo}";
     }
 
 } catch (Exception $e) {
