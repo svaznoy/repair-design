@@ -209,15 +209,15 @@
                 <div class="swiper-wrapper swiper-no-swiping">
                   <!-- Slides -->
                   <div class="swiper-slide">
-                    <img src="./image/products1.webp" class="swipe-wraper__image" alt="slide">
+                    <img data-src="./image/products1.webp" class="swipe-wraper__image" alt="slide lazyload">
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="./image/products1.webp" class="swipe-wraper__image" alt="slide">
+                    <img data-src="./image/products1.webp" class="swipe-wraper__image" alt="slide lazyload">
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="./image/products1.webp" class="swipe-wraper__image" alt="slide">
+                    <img data-src="./image/products1.webp" class="swipe-wraper__image" alt="slide lazyload">
                   </div>
                 </div>
               </div>
@@ -297,7 +297,7 @@
           <div class="row">
             <div class="col-32" id="message">
               <div class="card types__card">
-                <img src="./image/image-1.webp" alt="Косметический ремонт" class="card__image show">
+                <img data-src="./image/image-1.webp" alt="Косметический ремонт" class="card__image show lazyload">
                 <div class="card__text">
                   <h3 class="card__title">Косметический ремонт</h3>
                   <!-- /.card__title -->
@@ -328,7 +328,7 @@
             <!-- /.col -->
             <div class="col-32">
               <div class="card types__card">
-                <img src="./image/image-2.webp" alt="Капитальный ремонт" class="card__image show">
+                <img data-src="./image/image-2.webp" alt="Капитальный ремонт" class="card__image show lazyload">
                 <div class="card__text">
                   <h3 class="card__title">Капитальный ремонт</h3>
                   <!-- /.card__title -->
@@ -359,7 +359,7 @@
             <!-- /.col -->
             <div class="col-32">
               <div class="card types__card">
-                <img src="./image/image-3.webp" alt="Дизайнерский ремонт" class="card__image show">
+                <img data-src="./image/image-3.webp" alt="Дизайнерский ремонт" class="card__image show lazyload">
                 <div class="card__text">
                   <h3 class="card__title">Дизайнерский ремонт</h3>
                   <!-- /.card__title -->
@@ -415,7 +415,7 @@
           <div class="row">
             <div class="col-32 wow animate__fadeInUpBig" data-wow-duration="0.4s">
               <div class="card types__card">
-                <img src="./image/design-1.webp" alt="Минимальный" class="card__image">
+                <img data-src="./image/design-1.webp" alt="Минимальный" class="card__image lazyload">
                 <div class="card__text">
                   <h3 class="card__title">Минимальный</h3>
                   <!-- /.card__title -->
@@ -440,7 +440,7 @@
             <!-- /.col -->
             <div class="col-32 wow animate__fadeInUpBig" data-wow-duration="0.8s">
               <div class="card types__card">
-                <img src="./image/design-2.webp" alt="Стандартный" class="card__image">
+                <img data-src="./image/design-2.webp" alt="Стандартный" class="card__image lazyload">
                 <div class="card__text">
                   <h3 class="card__title">Стандартный</h3>
                   <!-- /.card__title -->
@@ -471,7 +471,7 @@
             <!-- /.col -->
             <div class="col-32 wow animate__fadeInUpBig" data-wow-duration="1.2s">
               <div class="card types__card">
-                <img src="./image/design-3.webp" alt="Полный" class="card__image">
+                <img data-src="./image/design-3.webp" alt="Полный" class="card__image lazyload">
                 <div class="card__text">
                   <h3 class="card__title">Полный</h3>
                   <!-- /.card__title -->
@@ -790,7 +790,7 @@
                 <!-- /.slide-list -->
               </ul>
               <!-- /.slide -->
-              <img src="./image/target1.webp" alt="target" id="example_img">
+              <img data-src="./image/target1.webp" class="lazyload" alt="target" id="example_img">
             </div>
             <!-- /.col-70 -->
           </div>
@@ -820,7 +820,7 @@
                 </div>
                 <!-- /.box-image -->
                 <div class="card-container">
-                  <img src="./image/people1.webp" class="image-people" alt="people">
+                  <img data-src="./image/people1.webp" class="image-people lazyload" alt="people">
                   <div class="people-text">
                     <h4 class="people-text__title">Алексей Колмаков</h4>
                         <!-- /.people-text__title -->
@@ -841,7 +841,7 @@
                 </div>
                 <!-- /.box-image -->
                 <div class="card-container">
-                  <img src="./image/people2.webp" class="image-people" alt="people">
+                  <img data-src="./image/people2.webp" class="image-people lazyload" alt="people">
                   <div class="people-text">
                     <h4 class="people-text__title">Алиса Сухорукова</h4>
                         <!-- /.people-text__title -->
@@ -862,7 +862,7 @@
                 </div>
                 <!-- /.box-image -->
                 <div class="card-container">
-                  <img src="./image/people3.webp" class="image-people" alt="people">
+                  <img data-src="./image/people3.webp" class="image-people lazyload" alt="people">
                   <div class="people-text">
                     <h4 class="people-text__title">Давид Волынев</h4>
                         <!-- /.people-text__title -->
@@ -1090,7 +1090,7 @@
           <!-- /.footer-link -->
 
           
-          <div class="container-map container-map__our" id="map">
+          <div class="container-map container-map__our" id="YaMaps">
           </div>   
         </div>
         <!-- /.footer__map -->
@@ -1135,12 +1135,14 @@
     <!-- /.arrow -->
     
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?loadByRequire=1&apikey=8bc46eae-1a4d-44a8-8a15-8aa8fac320ee&lang=ru_RU"></script>
     <script defer src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/wow.min.js"></script>
-    <script defer src="./js/main.js"></script>
+    <script defer src="./js/lazysizes.min.js"></script>
+    <script async src="./js/main.js"></script>
+    <script async src="./js/map.js"></script>
+    
     
   
     
