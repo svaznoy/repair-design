@@ -33,7 +33,6 @@ $(document).ready(function () {
   var close = $(".success__close");
   var modalCl = $("#submitmodal");
   var valute;
-  var YaMapsShown;
   var modal = $(".modal"),
     modalBtn = $("[data-toggle=modal]"),
     modalClose = $(".modal__close");
@@ -272,27 +271,7 @@ $(document).ready(function () {
       event.targetplayer.playVideo();
     }
 
-
-
   });
-
-  YaMapsShown = false;
-  
-  $(window).scroll(function () {
-      if (!YaMapsShown) {
-      if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-          showYaMaps();
-          YaMapsShown = true;
-      }
-      }
-  });
-
-  function showYaMaps() {
-      var script = document.createElement("script");
-      script.src = "https://api-maps.yandex.ru/2.1/?apikey=8bc46eae-1a4d-44a8-8a15-8aa8fac320ee&lang=ru_RU";
-      document.getElementById("YaMaps").appendChild(script);  
-  }
-
 
 });
 
