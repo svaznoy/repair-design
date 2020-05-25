@@ -1,11 +1,14 @@
 
 
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch , series} = require('gulp');
 const browserSync = require('browser-sync').create();
-const cleanCSS = require('gulp-clean-css');
+const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const minify = require('gulp-minify');
+const htmlmin = require('gulp-htmlmin');
+const tinypng = require('gulp-tinypng-compress');
 
 // Static servern
 function bs() {
@@ -22,14 +25,6 @@ function bs() {
 }
 
 
-function miniCss() {
-    return src('./css/*.css')
-      .pipe(rename('style.min.css'))
-      .pipe(cleanCSS())
-      .pipe(dest('main'));
-  }
-
-
   function serveSass() {
     return src("./src/sass/**/*.sass", "./src/sass/**/*.scss")
         .pipe(sass())
@@ -40,4 +35,62 @@ function miniCss() {
         .pipe(browserSync.stream());
 }
 
+
+function buildCss(done) {
+    src(['./src/css/**.css', '!./src/css/**.min.css'])
+        .pipe(cleanCss({compatibility: 'ie8'}))
+        .pipe(dest('./dist/css/'));
+    src('./src/css/**.min.css').pipe(dest('./dist/css/'));    
+     done();
+  }
+
+function buildJs(done) {
+    src(['./src/js/**.js', '!./src/js/**.min.js'])
+        .pipe(minify({
+            ext: {
+                min: '.js'
+            },
+            exclude: ['buildJs']
+
+        }))
+        .pipe(dest('./dist/js/'));
+    src('./src/js/**.min.js').pipe(dest('./dist/js/'));
+    done();
+    
+}  
+
+function html(done) {
+    src('./src/**.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(dest('./dist/'));
+    done();
+}
+
+function php(done) {
+    src('./src/**.php')
+        .pipe(dest('./dist/'));
+    src('./src/phpmailer/**/**.php') 
+        .pipe(dest('./dist/phpmailer'));   
+    done();
+}
+
+function fonts(done) {
+    src('./src/fonts/**/**')
+        .pipe(dest('./dist/fonts'));
+    done();
+}
+
+function imageMin(done) {
+    src('./src/img/**/**')
+        .pipe(tinypng({key: 'sxGrcrPytDsVyXM1JPzVl0yk2HF6KsfS'}))
+        .pipe(dest('./dist/image'));
+    src('./src/img/hero/**/**')
+        .pipe(tinypng({key: 'sxGrcrPytDsVyXM1JPzVl0yk2HF6KsfS'}))
+        .pipe(dest('./dist/image'));
+    src('./src/img/**/*.svg')
+        .pipe(dest('./dist/image'));
+    done();
+}
+
 exports.serve = bs;
+exports.build = series(buildCss, buildJs, html, php, fonts, imageMin);
