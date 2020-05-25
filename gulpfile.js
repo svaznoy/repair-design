@@ -95,6 +95,6 @@ function imageMin(done) {
 }
 
 exports.serve = bs;
-exports.build = series(buildCss, buildJs, html, php, fonts, imageMin);
+exports.build = series(html);
 
 //, buildCss, buildJs, html, php, fonts, imageMin
