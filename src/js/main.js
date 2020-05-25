@@ -268,7 +268,7 @@ $(document).ready(function () {
     });
 
     function videoPlay(event) {
-      event.targetplayer.playVideo();
+      event.target.playVideo();
     }
 
   });
