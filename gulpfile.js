@@ -29,7 +29,7 @@ function bs() {
     return src("./src/sass/**/*.sass", "./src/sass/**/*.scss")
         .pipe(sass())
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
         .pipe(dest("./src/css/"))
@@ -46,13 +46,18 @@ function buildCss(done) {
   }
 
 function buildJs(done) {
-    src(['./src/js/**.js', '!./src/js/**.min.js'])
-        .pipe(minify({
-            noSource: true,
-            ignoreFiles: ['*.min.js'],
-        }))
+    src(['./src/js/*.js', '!./src/js/**.min.js'])
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
         .pipe(dest('./dist/js/'));
-    src('./src/js/**.min.js').pipe(dest('./dist/js/'));
+    src('./src/js/**.min.js')
+        .pipe(dest('./dist/js/'));
     done();
     
 }  
@@ -79,8 +84,10 @@ function fonts(done) {
 }
 
 function imageMin(done) {
-    src('./src/image/**/**')
-        .pipe(tinypng({key: 'sxGrcrPytDsVyXM1JPzVl0yk2HF6KsfS'}))
+    src('./src/image/**/*.{png,jpg,jpeg}')
+        .pipe(tinypng({key: 'sxGrcrPytDsVyXM1JPzVl0yk2HF6KsfS',}))
+        .pipe(dest('./dist/image/'));
+    src('./src/image/**/*.webp')
         .pipe(dest('./dist/image/'));
     src('./src/image/**/*.svg')
         .pipe(dest('./dist/image/'));
@@ -88,6 +95,6 @@ function imageMin(done) {
 }
 
 exports.serve = bs;
-exports.build = series(buildCss, buildJs, html, php, fonts, imageMin);
+exports.build = series(buildCss, buildJs, html, php, fonts);
 
 //, buildCss, buildJs, html, php, fonts, imageMin

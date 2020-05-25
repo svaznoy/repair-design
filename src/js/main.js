@@ -254,6 +254,24 @@ $(document).ready(function () {
     });
 
 
+    var player;
+
+    $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '460',
+        width: '100%',
+        videoId: 'MZqtJ1IrRNI',
+        events: {
+          'onReady': videoPlay,
+        }
+      });
+    });
+
+    function videoPlay(event) {
+      event.targetplayer.playVideo();
+    }
+
+
 
   });
 
@@ -261,68 +279,6 @@ $(document).ready(function () {
 
 
 });
-
-
-
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-      center: [55.757891, 37.637973],
-      zoom: 11
-    }, {
-      searchControlProvider: 'yandex#search'
-    }),
-
-    // Создаём макет содержимого.
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      hintContent: 'Где тоут работаю',
-      balloonContent: 'Скоро опять на работу((('
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#image',
-      // Своё изображение иконки метки.
-      iconImageHref: 'img/smart.svg',
-      // Размеры метки.
-      iconImageSize: [30, 42],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-5, -38]
-    }),
-
-    myPlacemarkWithContent = new ymaps.Placemark([
-      55.797669, 37.938750
-    ], {
-      hintContent: 'Закрыто на карантин))))',
-      balloonContent: 'Когда нибудь откроют!)))',
-      iconContent: '12'
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
-      iconImageHref: 'img/avatar.svg',
-      // Размеры метки.
-      iconImageSize: [48, 48],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-24, -24],
-      // Смещение слоя с содержимым относительно слоя с картинкой.
-      iconContentOffset: [15, 15],
-      // Макет содержимого.
-      iconContentLayout: MyIconContentLayout
-    });
-
-  myMap.geoObjects
-    .add(myPlacemark)
-    .add(myPlacemarkWithContent);
-});
-
-
-
 
 //control checkbox
 $(function () {
@@ -427,19 +383,81 @@ $(document).ready(function () {
     );
     return false;
   });
+
+
+  var wow = new WOW({
+    boxClass: "wow", // animated element css class (default is wow)
+    animateClass: "animate__animated", // animation css class (default is animated)
+    offset: 0, // distance to the element when triggering the animation (default is 0)
+    mobile: false, // trigger animations on mobile devices (default is true)
+    live: true, // act on asynchronously loaded content (default is true)
+    scrollContainer: null, // optional scroll container selector, otherwise use window,
+    resetAnimation: true, // reset animation on end (default is true)
+  });
+  wow.init();
+
 });
 
-var wow = new WOW({
-  boxClass: "wow", // animated element css class (default is wow)
-  animateClass: "animate__animated", // animation css class (default is animated)
-  offset: 0, // distance to the element when triggering the animation (default is 0)
-  mobile: true, // trigger animations on mobile devices (default is true)
-  live: true, // act on asynchronously loaded content (default is true)
-  callback: function (box) {
-    // the callback is fired every time an animation is started
-    // the argument that is passed in is the DOM node being animated
-  },
-  scrollContainer: null, // optional scroll container selector, otherwise use window,
-  resetAnimation: true, // reset animation on end (default is true)
-});
-wow.init();
+
+
+
+setTimeout(function(){
+  
+	ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+        center: [55.757891, 37.637973],
+        zoom: 11
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+  
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+  
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Где тоут работаю',
+        balloonContent: 'Скоро опять на работу((('
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: '../image/smart.svg',
+        // Размеры метки.
+        iconImageSize: [30, 42],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-5, -38]
+      }),
+  
+      myPlacemarkWithContent = new ymaps.Placemark([
+        55.797669, 37.938750
+      ], {
+        hintContent: 'Закрыто на карантин))))',
+        balloonContent: 'Когда нибудь откроют!)))',
+        iconContent: '12'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: '../image/avatar.svg',
+        // Размеры метки.
+        iconImageSize: [48, 48],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+      });
+  
+    myMap.geoObjects
+      .add(myPlacemark)
+      .add(myPlacemarkWithContent);
+  });
+}, 10000);
+
