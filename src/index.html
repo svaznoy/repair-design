@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- image slider 2 -->
+    <script type="text/javascript">
+      function l_image (a) {document.example_img.src = a;}</script>
   </head>
 
   <body>
@@ -27,6 +30,8 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/64350604" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
+
+
     <header class="header">
       <div class="container">
         <div class="menu">
@@ -35,12 +40,12 @@
           </div>
           <!-- /.logo menu__logo -->
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item nav--primary">Главная</a>
-            <a href="#" class="nav__item">Проекты</a>
-            <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
-            <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#top" class="nav__item nav--primary">Главная</a>
+            <a  href="#project" class="nav__item">Проекты</a>
+            <a href="#linear" class="nav__item">Замер</a>
+            <a href="#comand" class="nav__item">Команда</a>
+            <a href="#like" class="nav__item">Отзывы</a>
+            <a href="#contacts" class="nav__item">Контакты</a>
           </nav>
           <!-- /.nav -->
           <div class="contacts menu__contacts">
@@ -55,9 +60,9 @@
     </header>
     <!-- /.header -->
     <main class="main">
-      <section class="hero">
+      <section class="hero" id="top">
         <div class="instagram hero__instagram">
-          <a href="#" class="instagram__link">instagram</a>
+          <a href="https://www.instagram.com/" class="instagram__link">instagram</a>
         </div>
         <!-- /.instagram hero__instagram -->
         <div class="container">
@@ -87,7 +92,7 @@
       </section>
       <!-- /.hero -->
 
-      <section class="section--dark product product__position">
+      <section id="project" class="section--dark product product__position">
         <div class="container">
           <div class="row">
             <div class="col-50 col-50--right">
@@ -298,7 +303,7 @@
       </section>
       <!-- /.section control -->
 
-      <div class="section types">
+      <div class="section types" id="linear">
         <div class="container">
           <div class="section-title types__section-title">
             <h2 class="section-title__heading section__types">Виды ремонта</h2>
@@ -709,7 +714,7 @@
             <div class="col-70">
               <ul class="slide">
                 <li class="slide-list">
-                  <a href="" class="slide-list__link">
+                  <a href="javascript:l_image('./img/slider-1.jpg')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">01</span>
                       <!-- /.slide-list__number -->
@@ -725,7 +730,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="" class="slide-list__link" id="image">
+                  <a href="javascript:l_image('./img/slider-2.jpg')" class="slide-list__link" id="image">
                     <div class="slide-list__text">
                       <span class="slide-list__number">02</span>
                       <!-- /.slide-list__number -->
@@ -740,7 +745,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="#" class="slide-list__link">
+                  <a href="javascript:l_image('./img/slider-3.jpg')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">03</span>
                       <!-- /.slide-list__number -->
@@ -756,7 +761,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="#" class="slide-list__link">
+                  <a href="javascript:l_image('./img/slider-4.jpg')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">04</span>
                       <!-- /.slide-list__number -->
@@ -772,7 +777,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="#" class="slide-list__link">
+                  <a href="javascript:l_image('./img/slider-5.jpg')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">05</span>
                       <!-- /.slide-list__number -->
@@ -788,7 +793,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="#" class="slide-list__link">
+                  <a href="javascript:l_image('./img/slider-6.jpg')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">06</span>
                       <!-- /.slide-list__number -->
@@ -815,7 +820,7 @@
       </div>
       <!-- /.section section_dark target -->
       
-      <div class="section-people people people--dark">
+      <div class="section-people people people--dark" id="comand">
         <div class="container">
           <div class="section-title types__section-title">
             <h2 class="section-title__heading section__types--light">Наша команда</h2>
@@ -904,7 +909,7 @@
       </div>
         <!-- /.section people people_dark -->
 
-        <section class="section section-client">
+        <section class="section section-client" id="like">
           <div class="container">
             <div class="section-title client__section-title">
               <h2 class="section-title__heading  section-title__heading--dark">Наши клиенты</h2>
@@ -1094,13 +1099,13 @@
         </div>
         <!-- /.footer-wrap -->
 
-        <div class="footer__map">
+        <div class="footer__map" id="contacts"> 
           <h2 class="footer__title-map">Ростов на дону, Торговый центр Plaza
             Прямой телефон +7 (999) 768 32 99</h2>
           <!-- /.footer-title -->
           <div class="footer__link">
-            <a href="#" class="footer__email-link"><img src="./image/email.svg" class="footer__email-image" alt="email"></a> <!-- /.email-link -->
-            <a href="#" class="footer__instagram-link"><img src="./image/instagram.svg" class="footer__instagram-image" alt="instagram"></a> <!-- /.instagram-link -->
+            <a href="mailto:romansanwow@gmail.com" class="footer__email-link"><img src="./image/email.svg" class="footer__email-image" alt="email"></a> <!-- /.email-link -->
+            <a href="https://www.instagram.com/" class="footer__instagram-link"><img src="./image/instagram.svg" class="footer__instagram-image" alt="instagram"></a> <!-- /.instagram-link -->
           </div>
           <!-- /.footer-link -->
 
@@ -1123,12 +1128,12 @@
             </div>
             <!-- /.logo menu__logo -->
             <nav class="nav menu__nav">
-              <a href="#" class="nav__item nav--primary">Главная</a>
-              <a href="#" class="nav__item">Проекты</a>
-              <a href="#" class="nav__item">Замер</a>
-              <a href="#" class="nav__item">Команда</a>
-              <a href="#" class="nav__item">Отзывы</a>
-              <a href="#" class="nav__item">Контакты</a>
+              <a href="#top" class="nav__item nav--primary">Главная</a>
+              <a href="#project" class="nav__item">Проекты</a>
+              <a href="#linear" class="nav__item">Замер</a>
+              <a href="#comand" class="nav__item">Команда</a>
+              <a href="#like" class="nav__item">Отзывы</a>
+              <a href="#contacts" class="nav__item">Контакты</a>
             </nav>
             <!-- /.nav -->
             <div class="contacts menu__contacts">
