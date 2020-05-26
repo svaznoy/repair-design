@@ -706,9 +706,6 @@ img {
       border: 1px solid #E3B873;
       border-radius: 50%;
       margin-left: 1.3rem; }
-    .hero__scroll-down:hover {
-      -webkit-text-decoration-line: underline;
-      text-decoration-line: underline; }
 
 .instagram {
   display: flex;

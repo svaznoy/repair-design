@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repair Design Project</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- image slider 2 -->
     <script type="text/javascript">
-      function l_image (a) {document.example_img.src = a;}</script>
+      function l_image (a) {
+          document.example_img.src = a;
+      }
+      </script>
   </head>
 
   <body>
@@ -36,10 +40,10 @@
       <div class="container">
         <div class="menu">
           <div class="logo menu__logo wow animate__bounce">
-            <a href="#" class="logo__item logo--primary">Repair Design Project</a>
+            <a href="index.html" class="logo__item logo--primary">Repair Design Project</a>
           </div>
           <!-- /.logo menu__logo -->
-          <nav class="nav menu__nav">
+          <nav class="nav menu__nav" id="nav">
             <a href="#top" class="nav__item nav--primary">Главная</a>
             <a  href="#project" class="nav__item">Проекты</a>
             <a href="#linear" class="nav__item">Замер</a>
@@ -714,7 +718,7 @@
             <div class="col-70">
               <ul class="slide">
                 <li class="slide-list">
-                  <a href="javascript:l_image('./img/slider-1.jpg')" class="slide-list__link">
+                  <a href="javascript:l_image('./image/slider-1.webp')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">01</span>
                       <!-- /.slide-list__number -->
@@ -730,7 +734,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="javascript:l_image('./img/slider-2.jpg')" class="slide-list__link" id="image">
+                  <a href="javascript:l_image('./image/slider-2.webp')" class="slide-list__link" id="image">
                     <div class="slide-list__text">
                       <span class="slide-list__number">02</span>
                       <!-- /.slide-list__number -->
@@ -745,7 +749,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="javascript:l_image('./img/slider-3.jpg')" class="slide-list__link">
+                  <a href="javascript:l_image('./image/slider-3.webp')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">03</span>
                       <!-- /.slide-list__number -->
@@ -761,7 +765,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="javascript:l_image('./img/slider-4.jpg')" class="slide-list__link">
+                  <a href="javascript:l_image('./image/slider-4.webp')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">04</span>
                       <!-- /.slide-list__number -->
@@ -777,7 +781,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="javascript:l_image('./img/slider-5.jpg')" class="slide-list__link">
+                  <a href="javascript:l_image('./image/slider-5.webp')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">05</span>
                       <!-- /.slide-list__number -->
@@ -793,7 +797,7 @@
                 </li>
                 <!-- /.slide-list -->
                 <li class="slide-list">
-                  <a href="javascript:l_image('./img/slider-6.jpg')" class="slide-list__link">
+                  <a href="javascript:l_image('./image/slider-6.webp')" class="slide-list__link">
                     <div class="slide-list__text">
                       <span class="slide-list__number">06</span>
                       <!-- /.slide-list__number -->
@@ -810,7 +814,7 @@
                 <!-- /.slide-list -->
               </ul>
               <!-- /.slide -->
-              <img data-src src="./image/target1.webp" class="lazyload" alt="target" id="example_img">
+              <img data-src src="./image/slider-1.webp" name="example_img" class="lazyload" alt="target" id="example_img">
             </div>
             <!-- /.col-70 -->
           </div>
