@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+let ymaps;
 let YaMapsShown;
 
 YaMapsShown = false;
