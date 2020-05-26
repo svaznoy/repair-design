@@ -250,7 +250,7 @@ $(document).ready(function () {
 
 
     $("[type=tel]").mask("+7 (000) 00-00-000", {
-      placeholder: "+7 (___) __-__-___",
+      placeholder: "+7 (999) 99-99-999",
     });
 
 

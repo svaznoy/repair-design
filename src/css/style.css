@@ -500,7 +500,8 @@ img {
   border-radius: 2px;
   text-transform: uppercase;
   font-family: 'Futura Demi', sans-serif;
-  font-size: 0.93rem; }
+  font-size: 0.93rem;
+  outline: none; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -924,7 +925,8 @@ img {
   text-align: center;
   color: #FFFFFF;
   background-color: #E3B873;
-  padding: 1.21rem 2.4rem; }
+  padding: 1.21rem 2.4rem;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.2); }
 
 .design {
   padding: 10rem 0;
@@ -953,7 +955,8 @@ img {
   background-color: #E3B873;
   padding: 1.21rem 0;
   padding-left: 2.6rem;
-  padding-right: 5.6rem; }
+  padding-right: 5.6rem;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.2); }
 
 .target {
   margin-top: -159px;
@@ -1201,7 +1204,7 @@ img {
     flex-direction: column;
     align-items: center;
     background-color: #FFFFFF;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
     max-width: 233px; }
     .people-text__title {
       font-family: 'Yeseva One', cursive;
@@ -1469,6 +1472,10 @@ img {
     margin-bottom: 5rem; } }
 
 @media screen and (max-width: 1000px) {
+  body {
+    box-shadow: none; }
+  *:hover {
+    box-shadow: none; }
   .nav {
     display: none; }
   .hero__instagram {
