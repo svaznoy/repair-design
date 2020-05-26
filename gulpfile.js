@@ -29,7 +29,7 @@ function bs() {
     return src("./src/sass/**/*.sass", "./src/sass/**/*.scss")
         .pipe(sass())
         .pipe(autoprefixer({
-            overrideBrowserslist: ['last 1 versions'],
+            overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
         .pipe(dest("./src/css/"))
@@ -95,6 +95,6 @@ function imageMin(done) {
 }
 
 exports.serve = bs;
-exports.build = series(html);
+exports.build = series(buildCss, buildJs, html);
 
 //, buildCss, buildJs, html, php, fonts, imageMin

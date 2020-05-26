@@ -69,7 +69,9 @@ function showYaMaps() {
             // Макет содержимого.
             iconContentLayout: MyIconContentLayout
         });
-    
+        // myMap.behaviors.disable('multiTouch');
+        // myMap.behaviors.disable('drag');
+        myMap.behaviors.disable('scrollZoom');
         myMap.geoObjects
         .add(myPlacemark)
         .add(myPlacemarkWithContent);
