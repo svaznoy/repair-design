@@ -82,20 +82,14 @@ $(document).ready(function () {
     event.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 
-      { 
-        duration: 5500, // продолжительность анимации
-        easing: "linear"
-      });
-    
+    $('body,html').animate({scrollTop: top}, 6500); 
 });
 
 $("#foot").on("click","a", function (event) {
   event.preventDefault();
   var id  = $(this).attr('href'),
       up = $(id).offset().up;
-  $('body,html').animate({scrollTop: up}, 2250);
-  
+  $('body,html').animate({scrollTop: up}, 6250);
 });
 
 
@@ -437,7 +431,7 @@ $(document).ready(function () {
     $("body,html").animate({
         scrollTop: 0,
       },
-      500
+      2500 
     );
     return false;
   });
