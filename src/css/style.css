@@ -1620,7 +1620,7 @@ div#userquestion-error.invalid {
   width: 100%; }
   .footer__wrap {
     position: relative;
-    background: #181818;
+    background: #131313;
     max-width: 63.07rem;
     margin: auto;
     margin-top: -15.85rem;
@@ -1666,15 +1666,29 @@ div#userquestion-error.invalid {
         flex-basis: 100%;
         margin-bottom: 2rem; }
   .footer__email-image {
-    width: 29px;
-    border-radius: 50%; }
+    width: 29px; }
+    .footer__email-image:hover {
+      -webkit-transition: -webkit-box-shadow 0.3s;
+      transition: -webkit-box-shadow 0.3s;
+      transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
     .footer__email-image--primary {
+      border-radius: 50%;
       -webkit-box-shadow: 0px 2px 25px rgba(227, 184, 115, 0.5);
       box-shadow: 0px 2px 25px rgba(227, 184, 115, 0.5); }
   .footer__instagram-image {
-    width: 29px;
-    border-radius: 50%; }
+    width: 29px; }
+    .footer__instagram-image:hover {
+      -webkit-transition: -webkit-box-shadow 0.3s;
+      transition: -webkit-box-shadow 0.3s;
+      transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
     .footer__instagram-image--primary {
+      border-radius: 50%;
       -webkit-box-shadow: 0px 2px 25px rgba(227, 184, 115, 0.5);
       box-shadow: 0px 2px 25px rgba(227, 184, 115, 0.5); }
   .footer__policy {
@@ -1830,10 +1844,16 @@ div#userquestion-error.invalid {
   .button--primary {
     -webkit-box-shadow: none;
     box-shadow: none; }
+  .button--outline {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .logo--primary:hover {
     text-decoration: none; }
   .phone:hover {
     text-decoration: none; }
+  .footer__email-image--primary, .footer__instagram-image--primary {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .nav {
     display: none; }
   .hero__instagram {
@@ -2274,6 +2294,7 @@ div#userquestion-error.invalid {
   .footer {
     padding-bottom: 3rem; }
     .footer__wrap {
+      background: #131313;
       margin-top: 2rem;
       margin-bottom: 1.6rem; }
     .footer__title-map {

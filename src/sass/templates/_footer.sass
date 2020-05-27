@@ -5,7 +5,7 @@
     width: 100%
     &__wrap
         position: relative
-        background: $black
+        background: $dark
         max-width: 63.07rem
         margin: auto
         margin-top: -15.85rem
@@ -39,16 +39,22 @@
                 flex-basis: 100%
                 margin-bottom: 2rem
     &__email-image 
-       
         width: 29px 
-        border-radius: 50%
-        &--primary
+        &:hover
+            transition: box-shadow 0.3s
+            box-shadow: none 
+        &--primary 
+            border-radius: 50%
             box-shadow: 0px 2px 25px rgba($primary, 0.5)  
     &__instagram-image 
         width: 29px 
-        border-radius: 50%
-        &--primary  
-            box-shadow: 0px 2px 25px rgba($primary, 0.5)          
+        &:hover
+            transition: box-shadow 0.3s
+            box-shadow: none 
+        &--primary 
+            border-radius: 50%
+            box-shadow: 0px 2px 25px rgba($primary, 0.5) 
+                     
     &__policy
         flex-basis: 100%
         margin-bottom: 3.6rem
