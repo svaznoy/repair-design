@@ -27,6 +27,7 @@
         color: rgba($light, 0.5)
         font-size: 1.07rem
 .input
+    vertical-align: top
     border: none
     border-bottom: 1px solid rgba(255, 255, 255, 0.15)
     background-color: transparent  
@@ -36,6 +37,10 @@
     &--light
         &::placeholder
             color: $light 
+    &::-moz-placeholder
+            opacity: 1 
+    &::-moz-placeholder
+        opacity: 1            
 .policy
     &__checkbox
         opacity: 0
@@ -58,7 +63,50 @@
             cursor: pointer 
             margin-right: 0.64rem  
         &--center
-            justify-content: center             
+            justify-content: center 
+
+
+div#user-name-error.invalid
+    position: absolute
+    top: 55px
+div#user-phone-error.invalid 
+    position: absolute
+    top: 155px
+div#user-email-error.invalid 
+    position: absolute
+    top: 255px      
+div#modalcheckbox-error.invalid 
+    position: absolute
+    top: 355px 
+
+
+div#usernamecontrol-error.invalid
+    position: absolute
+    top: 55px
+div#userphonecontrol-error.invalid 
+    position: absolute
+    top: 55px
+div#controlcheckbox-error.invalid  
+    position: absolute  
+    top: 115px
+      
+    
+    
+
+
+
+div#footercheck-error.invalid
+    position: absolute
+    top: 210px
+div#username-error.invalid 
+    position: absolute
+    top: 50px
+div#userphonefooter-error.invalid 
+    position: absolute
+    top: 50px      
+div#userquestion-error.invalid 
+    position: absolute
+    top: 150px 
 @media screen and ( max-width:  420px)  
     .button
-        font-size: 0.86rem          
+        font-size: 0.86rem 

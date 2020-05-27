@@ -11,12 +11,49 @@
             font-size: 1.57rem 
             line-height: 1.5
             max-width: 34rem
-            margin-bottom: 2.28rem  
+            margin-bottom: 2.28rem 
+
+
+    div#user-name-error.invalid
+        position: absolute
+        top: 50px
+    div#user-phone-error.invalid 
+        position: absolute
+        top: 135px
+    div#user-email-error.invalid 
+        position: absolute
+        top: 220px      
+    div#modalcheckbox-error.invalid 
+        position: absolute
+        top: 295px 
+
+
+
+    div#usernamecontrol-error.invalid
+        position: absolute
+        top: 50px
+    div#userphonecontrol-error.invalid 
+        position: absolute
+        top: 50px
+    div#controlcheckbox-error.invalid  
+        position: absolute  
+        top: 100px 
+
+
+    div#footercheck-error.invalid
+        top: 185px
+    div#username-error.invalid 
+        
+        top: 45px
+    div#userphonefooter-error.invalid 
+        top: 45px      
+    div#userquestion-error.invalid 
+        top: 130px          
 
 @media screen and (max-width: 1150px)
     .section
         &-people 
-            padding-top: 25rem
+            padding-top: 5rem
             background: $dark
     .target
         display: none
@@ -42,7 +79,7 @@
     .swipe
         &-wraper
             &__image
-                margin-top: 1rem
+                margin-top: 3rem
         &-slide
             &__heading
     .row
@@ -75,9 +112,26 @@
             display: none
         &-card
             margin-bottom: 5rem 
+    .card
+        &__text  
+            margin-bottom: 3rem
+                    
 
                                             
 @media screen and ( max-width:  1000px)
+
+    .button
+        &--primary
+            box-shadow: none
+    .logo
+        &--primary
+            &:hover
+               text-decoration: none
+    .phone
+        &:hover  
+            text-decoration: none           
+
+
     
     .nav
         display: none
@@ -86,6 +140,10 @@
             display: none
         &__content
             margin-left: 0
+        &__scroll-down
+            &:hover
+               text-decoration: none
+
 
     .col-50
         width: 50%
@@ -143,9 +201,8 @@
             margin-bottom: 2.214rem
             margin-top: -20rem
         &__video
-            background-size: cover
-            max-width: 40.37rem
-            min-height: 25rem
+            width: 100%
+            height: 100%
             margin-bottom: 3rem  
         &__text
             color: $light 
@@ -156,15 +213,22 @@
             padding-bottom: 5px
             color: rgba($light, 0.5)
         &__input
+            border-bottom: 1px solid $light
             margin-bottom: 2rem
             &::placeholder
                 color: $light
         &__button
             margin: auto
+            margin-top: 2rem
             width: 60%
         &__policy-label
             color: $light
-                 
+    div#usernamecontrol-error.invalid
+        top: 55px
+    div#userphonecontrol-error.invalid 
+        top: 130px
+    div#controlcheckbox-error.invalid  
+        top: 270px              
 
 @media screen and ( max-width:  620px)
     .row
@@ -203,7 +267,13 @@
                 font-size: 1.19rem
             &__value
                 font-size: 1.18rem 
-                    
+@media screen and ( max-height:  600px) 
+
+    .hero
+        &__scroll-down
+            display: none
+    .modal__dialog
+        top: 40px                          
 
 @media screen and ( max-width:  580px)
     .contacts
@@ -235,7 +305,17 @@
             display: none
 
     .design
-        background: $darkbgc 
+        background: $dark 
+
+    .control
+        &__video
+            max-width: 340px
+            min-height: 207px
+            background-size: cover
+    
+    .video__play  
+        max-width: 19%         
+                
 
     .section
         &-people
@@ -285,7 +365,23 @@
         order: -1 
         max-width: 340px
         max-height: 255px  
-                                   
+
+    .footer
+        &__policy  
+            margin-top: 1rem 
+
+
+   
+
+
+    div#footercheck-error.invalid
+        top: 320px
+    div#username-error.invalid 
+        top: 50px
+    div#userphonefooter-error.invalid 
+        top: 160px      
+    div#userquestion-error.invalid 
+        top: 270px                                   
 @media screen and ( max-height:  560px) 
     .col-50
         width: 60%
@@ -428,17 +524,20 @@
     .swipe
         &-wraper
             &__image
-                margin-top: 2.4rem   
+                margin-top: 2.4rem 
+                width: 100%
+                max-width: 340px
+                height: 207px  
+                
   
         &__control
-            margin-bottom: 1.6rem
-    .video__play  
-        max-width: 19%      
+            margin-bottom: 1.6rem     
     .control
         padding-bottom: 0
         &__video
             margin-top: 3.2rem
-            min-height: 17rem
+            
+            
         &__text
             text-align: center
             font-size: 1.16rem
@@ -486,7 +585,7 @@
         &-text
             margin-left: 2rem        
     .image-people
-        min-width: 305px
+        width: 305px
         height: 357px
         object-fit: cover
     .footer
@@ -503,7 +602,9 @@
             margin-right: 1rem
             width: 39px
         &__instagram-image
-            width: 39px  
+            width: 39px 
+        &__input
+            border-bottom: 1px solid $light     
 
     .container
         &-map
@@ -512,6 +613,13 @@
             max-height: 255px
             &__our
                 margin-bottom: 2rem
+
+    div#usernamecontrol-error.invalid
+        top: 60px
+    div#userphonecontrol-error.invalid 
+        top: 170px
+    div#controlcheckbox-error.invalid  
+        top: 220px             
 
 
       

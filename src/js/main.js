@@ -43,7 +43,9 @@ $(document).ready(function () {
     modal.toggleClass("modal--visible");
   });
   modalClose.on("click", function () {
+    $("#mainmodal")[0].reset();
     modal.toggleClass("modal--visible");
+    
   });
 
   
@@ -53,26 +55,72 @@ $(document).ready(function () {
   //Закрытие модалки по клику вне области модального окна
   $(document).click(function (e) {
     if ($(e.target).is(".modal")) {
+      $("#mainmodal")[0].reset();
       modal.toggleClass("modal--visible");
     }
   });
   //Закрытие модалки по клику esc
   $(document).keydown(function (event) {
     if (event.key === "Escape" || event.key === "Esc" || event.key === 27) {
+      $("#mainmodal")[0].reset();
       modal.toggleClass("modal--visible");
     }
   });
 
+
+  
+
+ 
+
+  
+
+  
+
+
+  //перемещение плавное вниз
   $("#nav").on("click","a", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+    $('body,html').animate({scrollTop: top}, 
+      { 
+        duration: 5500, // продолжительность анимации
+        easing: "linear"
+      });
+    
+});
+
+$("#foot").on("click","a", function (event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+      up = $(id).offset().up;
+  $('body,html').animate({scrollTop: up}, 2250);
+  
+});
+
+
+  
+
+
+
+
+$("a").click(function () {
+  var elementClick = $(this).attr("href");
+  var destination = $(elementClick).offset().top;
+  $('html, body').animate({ scrollTop: destination }, 600);
+  return false;
 });
 
 
   $().ready(function () {
     $(".modal__form").validate({
+      errorPlacement: function(error, element) {
+        if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+        }  
+        error.insertAfter($(element));
+      },
+
       errorClass: "invalid",
       errorElement: "div",
       rules: {
@@ -92,6 +140,9 @@ $(document).ready(function () {
           required: true,
           email: true
         },
+        modalcheckbox: {
+          required: true
+        },
       },
       messages: {
         userNameModal: {
@@ -105,9 +156,13 @@ $(document).ready(function () {
         userEmailModal: {
           required: "Заполните поле email",
           email: "Введите корректный email name@domain.com",
-        }
+        },
+        modalcheckbox: "Примите соглашение конфидициальности"
+           
+        
       },
 
+     
       submitHandler: function (form) {
         $.ajax({
 
@@ -115,7 +170,9 @@ $(document).ready(function () {
           url: "modal.php",
           data: $(form).serialize(),
           success: function (responce) {
+            
             $(form)[0].reset();
+
             modal.removeClass('modal--visible');
             success.toggleClass('success--visible');
             close.on('click', function() {
@@ -133,8 +190,15 @@ $(document).ready(function () {
     });
 
     $(".control__form").validate({
+      errorPlacement: function(error, element) {
+        if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+        }  
+        error.insertAfter($(element));
+      },
       errorClass: "invalid",
       errorElement: "div",
+      
       rules: {
 
         // simple rule, converted to {required:true}
@@ -148,9 +212,9 @@ $(document).ready(function () {
           minlength: 18
         },
 
-
-
-
+        controlcheckbox: {
+          required: true
+        },
       },
       messages: {
         userNameControl: {
@@ -160,6 +224,7 @@ $(document).ready(function () {
         },
 
         userPhoneControl: "Заполните Телефон",
+        controlcheckbox: "Примите соглашение конфидициальности",
       },
 
       submitHandler: function (form) {
@@ -171,11 +236,9 @@ $(document).ready(function () {
           success: function(responce) {
 
             success.toggleClass('success--visible');
-
             $(form)[0].reset();
-
             close.on('click', function() {
-             success.removeClass('success--visible');
+            success.removeClass('success--visible');
             });
            
           }
@@ -190,8 +253,15 @@ $(document).ready(function () {
 
 
     $(".footer__form").validate({
+      errorPlacement: function(error, element) {
+        if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+        }  
+        error.insertAfter($(element));
+    },
       errorClass: "invalid",
       errorElement: "div",
+      
       rules: {
         // simple rule, converted to {required:true}
         userNameForm: {
@@ -210,6 +280,9 @@ $(document).ready(function () {
           maxlength: 100
         },
 
+        footercheck:{
+          required: true
+      },
 
       },
       messages: {
@@ -226,7 +299,9 @@ $(document).ready(function () {
           minlength: "Вопрос не короче 10 символов",
           maxlength: "Вопрос не больше 100 символов",
         },
-
+        footercheck: {
+          required: "Примите соглашение конфидициальности"
+        },
 
       },
 
@@ -239,11 +314,9 @@ $(document).ready(function () {
           success: function (responce) {
             
             success.toggleClass('success--visible');
-
             $(form)[0].reset();
-
             close.on('click', function() {
-             success.removeClass('success--visible');
+            success.removeClass('success--visible');
             });
 
           }
@@ -254,12 +327,16 @@ $(document).ready(function () {
 
     });
 
+    
 
 
 
-    $("[type=tel]").mask("+7 (000) 00-00-000", {
-      placeholder: "+7 (999) 99-99-999",
+
+    $("[type=tel]").mask("+7 (999) 99-99-999", {
+      placeholder: "Ваш номер телефона:",
     });
+
+    
 
 
     var player;
@@ -296,15 +373,15 @@ $(function () {
 
 
 //modal checkbox
-$(function () {
-  $('#modal-checkbox').on('change', function () {
-    if ($('#modal-checkbox').prop('checked')) {
-      $('#submitmodal').attr('disabled', false);
-    } else {
-      $('#submitmodal').attr('disabled', true);
-    }
-  });
-});
+// $(function () {
+//   $('#modal-checkbox').on('change', function () {
+//     if ($('#modal-checkbox').prop('checked')) {
+//       $('#submitmodal').attr('disabled', false);
+//     } else {
+//       $('#submitmodal').attr('disabled', true);
+//     }
+//   });
+// });
 
 //footer checbox
 $(function () {
@@ -341,28 +418,6 @@ $(document).ready(function () {
   bullets1.css("left", prevBtn1.width() + 20);
 });
 
-$(document).ready(function () {
-  //initialize swiper when document ready
-  let mySwiper2 = new Swiper(".swiper-container2", {
-    // Optional parameters
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination2",
-      type: "bullets",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next2",
-      prevEl: ".swiper-button-prev2",
-    },
-  });
-
-  var nextBtn2 = $(".swiper-button-next2");
-  var prevBtn2 = $(".swiper-button-prev2");
-  var bullets2 = $(".swiper-pagination2");
-
-  nextBtn2.css("left", prevBtn2.width() + 20 + bullets2.width() + 20);
-  bullets2.css("left", prevBtn2.width() + 20);
-});
 
 $(document).ready(function () {
   /**
@@ -399,7 +454,13 @@ $(document).ready(function () {
   });
   wow.init();
 
+
+ 
+
 });
+
+
+
 
 
 
