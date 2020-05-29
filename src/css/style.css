@@ -2169,7 +2169,9 @@ div#userquestion-error.invalid {
     font-weight: 500;
     margin-bottom: 2rem; }
   ::after {
-    display: none; }
+    display: none; } }
+
+@media screen and (max-height: 420px) {
   .modal {
     top: -20px; }
     .modal__close {
