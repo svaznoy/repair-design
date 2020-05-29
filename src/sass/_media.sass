@@ -136,7 +136,10 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            padding-bottom: 15rem    
+            padding-bottom: 15rem  
+    .types
+        &__card
+            margin-bottom: 3rem 
 
     .button
         &--primary
@@ -317,7 +320,10 @@
         width: 13px
         height: 13px           
     
-
+    .container
+        &-map
+            max-width: 540px
+            max-height: 255px
     div#user-name-error.invalid
         position: absolute
         top: 45px
@@ -448,15 +454,61 @@
         &__scroll-down
             display: none       
         &__button
-            min-width: 28.5rem
-            margin-right: 0
-            padding: 18px 38px
-            font-size: 1.1rem
+            max-width: 29.7rem
+            margin-right: 1rem
+            padding: 18px 25px
+            font-size: 1rem
+            font-weight: 500
             margin-bottom: 2rem
     &::after
         display: none
 
-            
+    .modal
+        top: -20px
+        &__close
+            width: 0.5rem
+            height: 0.5rem
+        &__dialog
+            max-width: 25rem
+            padding: 10px 15px     
+        &__title
+            margin: auto
+            max-width: 15rem
+            font-size: 1rem 
+            margin-bottom: 1.5rem  
+        &__input-group
+            margin-bottom: 1.5rem
+            &:last-of-type
+                margin-bottom: 0rem
+        &__button  
+            font-size: 0.8rem
+            padding: 10px 15px 
+        &__policy
+            margin-top: -1rem
+            margin-bottom: 2rem 
+    .form
+        &__label
+            font-size: 1rem        
+    .input
+        font-size: 1rem
+        padding: 0           
+    .policy
+        &__label
+            font-size: 1rem              
+    div#user-name-error.invalid
+        position: absolute
+        top: 28px
+        font-size: 0.9rem
+    div#user-phone-error.invalid 
+        position: absolute
+        top: 73px
+    div#user-email-error.invalid 
+        position: absolute
+        top: 117px      
+    div#modalcheckbox-error.invalid 
+        position: absolute
+        top: 153px 
+        font-size: 0.95rem       
 @media screen and ( max-width:  420px)
     
     .menu
@@ -673,6 +725,26 @@
             max-height: 255px
             &__our
                 margin-bottom: 2rem
+    .arrow-up
+        display: none
+        visibility: hidden
+    .mobile-arrow
+        position: fixed
+        font-size: 0
+        display: flex
+        justify-content: center
+        z-index: 99
+        right: -30px
+        bottom: 50px
+        width: 30px
+        height: 30px
+        opacity: 0.6
+        transform: rotate(-45deg)
+        border-top: 5px solid $primary
+        border-right: 5px solid $primary
+        margin-right: 60px    
+        
+        
 
     div#usernamecontrol-error.invalid
         top: 60px

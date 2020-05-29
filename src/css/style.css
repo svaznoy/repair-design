@@ -1406,7 +1406,8 @@ div#userquestion-error.invalid {
   opacity: 0.7;
   -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-  cursor: pointer; }
+  cursor: pointer;
+  margin: auto; }
 
 .wrap {
   display: -webkit-box;
@@ -1874,6 +1875,8 @@ div#userquestion-error.invalid {
       -ms-flex-align: center;
       align-items: center;
       padding-bottom: 15rem; }
+  .types__card {
+    margin-bottom: 3rem; }
   .button--primary {
     -webkit-box-shadow: none;
     box-shadow: none; }
@@ -2042,6 +2045,9 @@ div#userquestion-error.invalid {
   .policy__label::before {
     width: 13px;
     height: 13px; }
+  .container-map {
+    max-width: 540px;
+    max-height: 255px; }
   div#user-name-error.invalid {
     position: absolute;
     top: 45px; }
@@ -2156,13 +2162,58 @@ div#userquestion-error.invalid {
   .hero__scroll-down {
     display: none; }
   .hero__button {
-    min-width: 28.5rem;
-    margin-right: 0;
-    padding: 18px 38px;
-    font-size: 1.1rem;
+    max-width: 29.7rem;
+    margin-right: 1rem;
+    padding: 18px 25px;
+    font-size: 1rem;
+    font-weight: 500;
     margin-bottom: 2rem; }
   ::after {
-    display: none; } }
+    display: none; }
+  .modal {
+    top: -20px; }
+    .modal__close {
+      width: 0.5rem;
+      height: 0.5rem; }
+    .modal__dialog {
+      max-width: 25rem;
+      padding: 10px 15px; }
+    .modal__title {
+      margin: auto;
+      max-width: 15rem;
+      font-size: 1rem;
+      margin-bottom: 1.5rem; }
+    .modal__input-group {
+      margin-bottom: 1.5rem; }
+      .modal__input-group:last-of-type {
+        margin-bottom: 0rem; }
+    .modal__button {
+      font-size: 0.8rem;
+      padding: 10px 15px; }
+    .modal__policy {
+      margin-top: -1rem;
+      margin-bottom: 2rem; }
+  .form__label {
+    font-size: 1rem; }
+  .input {
+    font-size: 1rem;
+    padding: 0; }
+  .policy__label {
+    font-size: 1rem; }
+  div#user-name-error.invalid {
+    position: absolute;
+    top: 28px;
+    font-size: 0.9rem; }
+  div#user-phone-error.invalid {
+    position: absolute;
+    top: 73px; }
+  div#user-email-error.invalid {
+    position: absolute;
+    top: 117px; }
+  div#modalcheckbox-error.invalid {
+    position: absolute;
+    top: 153px;
+    font-size: 0.95rem; } }
 
 @media screen and (max-width: 420px) {
   .menu {
@@ -2383,6 +2434,29 @@ div#userquestion-error.invalid {
     max-height: 255px; }
     .container-map__our {
       margin-bottom: 2rem; }
+  .arrow-up {
+    display: none;
+    visibility: hidden; }
+  .mobile-arrow {
+    position: fixed;
+    font-size: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 99;
+    right: -30px;
+    bottom: 50px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border-top: 5px solid #E3B873;
+    border-right: 5px solid #E3B873;
+    margin-right: 60px; }
   div#usernamecontrol-error.invalid {
     top: 60px; }
   div#userphonecontrol-error.invalid {
