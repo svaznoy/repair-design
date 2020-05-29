@@ -374,7 +374,8 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  overflow-x: hidden; }
 
 body {
   font-family: 'Futura Book', sans-serif;
@@ -1382,6 +1383,7 @@ div#userquestion-error.invalid {
 
 .arrow-up {
   position: fixed;
+  font-size: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1389,25 +1391,17 @@ div#userquestion-error.invalid {
   -ms-flex-pack: center;
   justify-content: center;
   z-index: 99;
-  left: 50px;
-  bottom: 50px;
-  width: 120px;
-  color: #333333;
-  line-height: 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Futura Demi', sans-serif;
-  font-size: 0.93rem;
-  border: none;
-  outline: none;
-  background-color: #E3B873;
-  color: #FFFFFF;
-  opacity: 0.7;
-  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-  cursor: pointer;
-  margin: auto; }
+  left: 5%;
+  bottom: 75px;
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-top: 5px solid #E3B873;
+  border-right: 5px solid #E3B873;
+  margin-right: 60px;
+  cursor: pointer; }
 
 .wrap {
   display: -webkit-box;
@@ -1877,6 +1871,8 @@ div#userquestion-error.invalid {
       padding-bottom: 15rem; }
   .types__card {
     margin-bottom: 3rem; }
+  .client-card__position {
+    margin-bottom: 3rem; }
   .button--primary {
     -webkit-box-shadow: none;
     box-shadow: none; }
@@ -2048,6 +2044,8 @@ div#userquestion-error.invalid {
   .container-map {
     max-width: 540px;
     max-height: 255px; }
+  .swiper-container-horizontal {
+    max-width: 400px; }
   div#user-name-error.invalid {
     position: absolute;
     top: 45px; }
