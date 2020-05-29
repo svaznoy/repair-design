@@ -630,7 +630,7 @@ div#user-email-error.invalid {
 
 div#modalcheckbox-error.invalid {
   position: absolute;
-  top: 355px; }
+  top: 335px; }
 
 div#usernamecontrol-error.invalid {
   position: absolute;
@@ -824,7 +824,8 @@ div#userquestion-error.invalid {
     color: #FFFFFF;
     font-size: 0.85rem;
     text-decoration: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
     .hero__scroll-down::after {
       content: '';
       background: url(../image/arow-down.svg) no-repeat center;
@@ -877,6 +878,7 @@ div#userquestion-error.invalid {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive;
+  font-weight: 500;
   font-size: 2.857rem;
   line-height: 1.3; }
   .title--primary {
@@ -1079,6 +1081,7 @@ div#userquestion-error.invalid {
   margin-top: 0;
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
+  font-weight: 500;
   margin-bottom: 0.6rem; }
 
 .card__list {
@@ -1265,16 +1268,18 @@ div#userquestion-error.invalid {
     margin: 12px;
     width: 2rem;
     height: 2rem;
-    background: transparent url(../image/close.svg) no-repeat center;
+    background: url(../image/close.svg) no-repeat center;
     color: #FFFFFF;
     border: none;
-    cursor: pointer; }
-    .modal__close:hover {
-      outline: none; }
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   .modal__title {
     font-family: 'Yeseva One', cursive;
     font-size: 1.35rem;
     text-align: center;
+    font-weight: 500;
     margin: 0;
     margin-bottom: 2.428rem; }
   .modal__form {
@@ -1546,6 +1551,7 @@ div#userquestion-error.invalid {
   display: inline-block;
   text-align: left;
   font-family: 'Yeseva One', cursive;
+  font-weight: 500;
   font-size: 1.285rem;
   line-height: 1.9rem; }
 
@@ -1789,21 +1795,14 @@ div#userquestion-error.invalid {
   __item {
     margin-right: 0.5rem; }
   .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .row__people {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .row__client {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-bottom: 15rem; }
   .col-50 {
     width: 50%;
     margin-right: auto;
@@ -1819,28 +1818,55 @@ div#userquestion-error.invalid {
   .section-client {
     padding-top: 5rem;
     padding-bottom: 5rem; }
-  .row__client {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-bottom: 15rem; }
   .client__section-title {
     margin-bottom: 3rem; }
   .client__heading {
     display: none; }
   .client-card {
     margin-bottom: 5rem; }
+  .client__image {
+    width: 20%; }
   .card__text {
-    margin-bottom: 3rem; } }
+    margin-bottom: 3rem; }
+  .box-image {
+    width: 60px;
+    height: 60px; } }
 
 @media screen and (max-width: 1000px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .row__people {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .row__client {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-bottom: 15rem; }
   .button--primary {
     -webkit-box-shadow: none;
     box-shadow: none; }
@@ -1865,8 +1891,6 @@ div#userquestion-error.invalid {
   .col-50 {
     width: 50%;
     margin-right: auto; }
-  .swipe-wraper__image {
-    max-width: 100%; }
   .swiper-slide__text {
     margin-right: auto; } }
 
@@ -1989,11 +2013,41 @@ div#userquestion-error.invalid {
   .swiper-slide__value {
     font-size: 1.18rem; } }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 670px) {
   .hero__scroll-down {
     display: none; }
-  .modal__dialog {
-    top: 40px; } }
+  .modal {
+    z-index: 99; }
+    .modal__close {
+      width: 1rem;
+      height: 1rem; }
+    .modal__dialog {
+      top: 20px;
+      max-width: 30rem; }
+    .modal__title {
+      max-width: 20rem;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem; }
+    .modal__input-group {
+      margin-bottom: 1.5rem; }
+    .modal__button {
+      padding: 10px 16px; }
+  .policy__label::before {
+    width: 13px;
+    height: 13px; }
+  div#user-name-error.invalid {
+    position: absolute;
+    top: 45px; }
+  div#user-phone-error.invalid {
+    position: absolute;
+    top: 107px; }
+  div#user-email-error.invalid {
+    position: absolute;
+    top: 170px; }
+  div#modalcheckbox-error.invalid {
+    position: absolute;
+    top: 220px;
+    font-size: 1rem; } }
 
 @media screen and (max-width: 580px) {
   .contacts__phone {
@@ -2311,6 +2365,9 @@ div#userquestion-error.invalid {
       width: 39px; }
     .footer__input {
       border-bottom: 1px solid #FFFFFF; }
+  .box-image {
+    width: 70px;
+    height: 70px; }
   .container-map {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
